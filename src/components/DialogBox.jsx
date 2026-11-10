@@ -2,7 +2,20 @@
 export default function DialogBox({ v }) {
   const { dsp } = v;
   return (
-    <div onClick={v.dlgClick} className="absolute left-0 right-0 top-0 bottom-9 bg-[rgba(8,18,22,.5)] flex items-end px-4 pb-[14px] box-border cursor-pointer z-10">
+    <div
+      role="button"
+      tabIndex={0}
+      autoFocus
+      aria-label="Avançar diálogo"
+      onClick={v.dlgClick}
+      onKeyDown={(e) => {
+        // Enter/Espaço avançam o diálogo (só quando o foco está na caixa, não nas escolhas)
+        if (e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) {
+          e.preventDefault();
+          v.dlgClick();
+        }
+      }}
+      className="absolute left-0 right-0 top-0 bottom-9 bg-[rgba(8,18,22,.5)] flex items-end px-4 pb-[14px] box-border cursor-pointer z-10 outline-none">
       <div className="flex gap-3 items-end w-full">
         <div
           className="w-[128px] h-[150px] flex-none border-[3px] border-ink flex items-center justify-center font-silk font-bold text-[64px] text-ink shadow-[5px_5px_0_#0007]"
@@ -22,9 +35,9 @@ export default function DialogBox({ v }) {
           {v.dChoices && (
             <div className="flex flex-col gap-2 mt-[6px]">
               {v.choices.map((c, i) => (
-                <div key={i} onClick={c.go} className="text-[22px] leading-[1.05] px-3 py-[7px] bg-white border-2 border-ink cursor-pointer hover:bg-sun">
+                <button type="button" key={i} onClick={c.go} className="text-left text-[22px] leading-[1.05] px-3 py-[7px] bg-white border-2 border-ink cursor-pointer hover:bg-sun">
                   &#9658; {c.t}
-                </div>
+                </button>
               ))}
             </div>
           )}

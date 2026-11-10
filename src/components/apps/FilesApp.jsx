@@ -9,17 +9,18 @@ export default function FilesApp({ v }) {
           {/* lista de arquivos */}
           <div className="flex-1 overflow-auto bg-cream p-2 flex flex-col gap-[6px]">
             {v.files.map((f, i) => (
-              <div
+              <button
+                type="button"
                 key={i}
                 onClick={f.pick}
-                className="flex items-center gap-3 px-[10px] py-[6px] border-2 cursor-pointer"
+                className="w-full text-left flex items-center gap-3 px-[10px] py-[6px] border-2 cursor-pointer"
                 style={{ borderColor: f.bd, background: f.bg, opacity: f.op }}
               >
-                <div className="w-[34px] h-10 bg-white border-2 border-bark font-silk text-[10px] flex items-end justify-center pb-[2px]">{f.ext}</div>
-                <div className="flex-1 text-[23px]">{f.n}</div>
-                <div className="text-[19px] text-stone">{f.kb}</div>
-                <div className="text-[17px] min-w-[96px] text-right font-bold">{f.status}</div>
-              </div>
+                <span className="w-[34px] h-10 bg-white border-2 border-bark font-silk text-[10px] flex items-end justify-center pb-[2px]">{f.ext}</span>
+                <span className="flex-1 text-[23px]">{f.n}</span>
+                <span className="text-[19px] text-stone">{f.kb}</span>
+                <span className="text-[17px] min-w-[96px] text-right font-bold">{f.status}</span>
+              </button>
             ))}
           </div>
 
@@ -33,8 +34,8 @@ export default function FilesApp({ v }) {
                 <div>Origem: <b>{v.sf.orig}</b></div>
                 {v.fileOpen && (
                   <div className="flex flex-col gap-2 mt-[6px]">
-                    <div onClick={v.fMove} className="px-[10px] py-[7px] bg-okbg bevel [--lo:#2c6a37] cursor-pointer text-center">Mover para Documentos</div>
-                    <div onClick={v.fQuar} className="px-[10px] py-[7px] bg-badbg bevel [--lo:#8c2a22] cursor-pointer text-center">Enviar para Quarentena</div>
+                    <button type="button" onClick={v.fMove} className="px-[10px] py-[7px] bg-okbg bevel [--lo:#2c6a37] cursor-pointer text-center">Mover para Documentos</button>
+                    <button type="button" onClick={v.fQuar} className="px-[10px] py-[7px] bg-badbg bevel [--lo:#8c2a22] cursor-pointer text-center">Enviar para Quarentena</button>
                   </div>
                 )}
               </div>

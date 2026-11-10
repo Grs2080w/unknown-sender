@@ -9,14 +9,14 @@ export default function EmailApp({ v }) {
         <div className="w-[260px] border-r-[3px] border-stone overflow-auto bg-[#f6f2e4]">
           {v.noEmails && <div className="p-4 text-[20px] text-[#5b5646]">Caixa vazia.</div>}
           {v.emails.map((m, i) => (
-            <div key={i} onClick={m.pick} className="px-[10px] py-2 border-b-2 border-sand cursor-pointer" style={{ background: m.bg }}>
-              <div className="text-[20px] font-bold flex justify-between gap-[6px]">
+            <button type="button" key={i} onClick={m.pick} className="block w-full text-left px-[10px] py-2 border-b-2 border-sand cursor-pointer" style={{ background: m.bg }}>
+              <span className="text-[20px] font-bold flex justify-between gap-[6px]">
                 <span>{m.from}</span>
                 <span className="font-silk text-[11px] px-1 py-[2px] text-ink self-start" style={{ background: m.tagBg }}>{m.tag}</span>
-              </div>
-              <div className="text-[19px] text-bark">{m.subject}</div>
-              <div className="text-[16px] text-stone">{m.time}</div>
-            </div>
+              </span>
+              <span className="block text-[19px] text-bark">{m.subject}</span>
+              <span className="block text-[16px] text-stone">{m.time}</span>
+            </button>
           ))}
         </div>
 
@@ -50,9 +50,9 @@ export default function EmailApp({ v }) {
               <div className="px-4 py-[10px] border-t-2 border-sand flex gap-[10px] flex-wrap items-center bg-beige">
                 {v.canAct && (
                   <div className="flex gap-[10px] flex-wrap">
-                    <div onClick={v.toggleInsp} className="text-[20px] px-[14px] py-[6px] bg-sun bevel [--lo:#8a6d00] cursor-pointer">Inspecionar mensagem</div>
-                    <div onClick={v.doAct} className="text-[20px] px-[14px] py-[6px] bg-beige bevel cursor-pointer">{se.act}</div>
-                    <div onClick={v.doReport} className="text-[20px] px-[14px] py-[6px] bg-badbg bevel [--lo:#8c2a22] cursor-pointer">Denunciar como phishing</div>
+                    <button type="button" onClick={v.toggleInsp} className="text-[20px] px-[14px] py-[6px] bg-sun bevel [--lo:#8a6d00] cursor-pointer">Inspecionar mensagem</button>
+                    <button type="button" onClick={v.doAct} className="text-[20px] px-[14px] py-[6px] bg-beige bevel cursor-pointer">{se.act}</button>
+                    <button type="button" onClick={v.doReport} className="text-[20px] px-[14px] py-[6px] bg-badbg bevel [--lo:#8c2a22] cursor-pointer">Denunciar como phishing</button>
                   </div>
                 )}
                 {v.resolvedSel && <div className="text-[20px] text-bark">Status: <b>{v.selResult}</b></div>}

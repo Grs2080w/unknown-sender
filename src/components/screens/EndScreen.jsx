@@ -13,7 +13,7 @@ export default function EndScreen({ v }) {
           <div key={i} className="mb-1">&#9658; {l.t}</div>
         ))}
       </div>
-      <div onClick={v.start} className="btn-amber mt-[6px] font-silk text-[18px] px-6 py-[10px]">JOGAR DE NOVO</div>
+      <button type="button" onClick={v.start} className="btn-amber mt-[6px] font-silk text-[18px] px-6 py-[10px]">JOGAR DE NOVO</button>
     </div>
   );
 }

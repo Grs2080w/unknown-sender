@@ -9,14 +9,14 @@ export default function TitleScreen({ v }) {
         Emails, ligacoes, mensagens e arquivos. Qualquer tarefa pode esconder um golpe.
       </div>
       <div className="flex gap-5 mt-2">
-        <div onClick={v.start} className="btn-amber w-[300px] box-border font-silk text-[18px] px-[18px] py-[14px] leading-[1.2]">
+        <button type="button" onClick={v.start} className="btn-amber w-[300px] box-border font-silk text-[18px] px-[18px] py-[14px] leading-[1.2]">
           MODO INTERATIVO
-          <div className="font-pixel text-[21px] mt-1">Viva um dia de trabalho</div>
-        </div>
-        <div onClick={v.startQuiz} className="btn-mint w-[300px] box-border font-silk text-[18px] px-[18px] py-[14px] leading-[1.2]">
+          <span className="block font-pixel text-[21px] mt-1">Viva um dia de trabalho</span>
+        </button>
+        <button type="button" onClick={v.startQuiz} className="btn-mint w-[300px] box-border font-silk text-[18px] px-[18px] py-[14px] leading-[1.2]">
           MODO QUIZ
-          <div className="font-pixel text-[21px] mt-1">12 perguntas com a Marta</div>
-        </div>
+          <span className="block font-pixel text-[21px] mt-1">12 perguntas com a Marta</span>
+        </button>
       </div>
     </div>
   );

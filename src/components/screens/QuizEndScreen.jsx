@@ -17,8 +17,8 @@ export default function QuizEndScreen({ v }) {
         ))}
       </div>
       <div className="flex gap-4 mt-[6px]">
-        <div onClick={v.startQuiz} className="btn-amber font-silk text-[16px] px-[22px] py-[10px]">REFAZER QUIZ</div>
-        <div onClick={v.toMenu} className="btn-mint font-silk text-[16px] px-[22px] py-[10px]">MENU</div>
+        <button type="button" onClick={v.startQuiz} className="btn-amber font-silk text-[16px] px-[22px] py-[10px]">REFAZER QUIZ</button>
+        <button type="button" onClick={v.toMenu} className="btn-mint font-silk text-[16px] px-[22px] py-[10px]">MENU</button>
       </div>
     </div>
   );

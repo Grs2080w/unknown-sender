@@ -10,6 +10,16 @@
     border-width: 0;
     border-style: solid;
   }
+  /* <button> sem o visual padrão do navegador: o estilo vem das classes de cada botão */
+  button {
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    background: none;
+    border-width: 0; /* não usar o atalho "border: 0": ele apaga o border-style que as classes border-* usam */
+    padding: 0;
+    margin: 0;
+  }
   body {
     margin: 0;
     background: #17140f;

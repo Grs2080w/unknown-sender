@@ -18,7 +18,7 @@ export default function ChatApp({ v }) {
           {v.chatCan && (
             <div className="px-4 py-[10px] border-t-2 border-sand bg-beige flex flex-col gap-2">
               {v.chatChoices.map((c, i) => (
-                <div key={i} onClick={c.go} className="text-[20px] px-3 py-[6px] bg-[#f6f2e4] bevel cursor-pointer">{c.t}</div>
+                <button type="button" key={i} onClick={c.go} className="text-[20px] px-3 py-[6px] bg-[#f6f2e4] bevel cursor-pointer">{c.t}</button>
               ))}
             </div>
           )}

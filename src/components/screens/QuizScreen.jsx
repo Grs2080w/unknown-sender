@@ -6,7 +6,7 @@ export default function QuizScreen({ v }) {
 
       {/* barra superior */}
       <div className="absolute left-0 right-0 top-0 h-11 bg-sand border-b-[3px] border-bark flex items-center gap-[14px] px-3 box-border text-[22px]">
-        <div onClick={v.toMenu} className="font-silk text-[12px] px-[10px] py-1 bg-beige bevel cursor-pointer">MENU</div>
+        <button type="button" onClick={v.toMenu} className="font-silk text-[12px] px-[10px] py-1 bg-beige bevel cursor-pointer">MENU</button>
         <div className="font-silk text-[13px]">QUIZ {v.qNum}/{v.qTotal}</div>
         <div className="flex-1 h-[14px] bg-beige border-2 border-bark">
           <div className="h-full bg-[#3fae5a]" style={{ width: v.qPct }} />
@@ -33,15 +33,16 @@ export default function QuizScreen({ v }) {
         <div className="flex-1 min-w-0 flex flex-col gap-[10px]">
           <div className="bg-paper border-[3px] border-ink shadow-[5px_5px_0_#0007] px-4 py-[10px] text-[27px] leading-[1.05]">{v.qPrompt}</div>
           {v.qOpts.map((o, i) => (
-            <div
+            <button
+              type="button"
               key={i}
               onClick={o.go}
-              className="flex gap-3 items-center text-[22px] leading-[1.05] px-3 py-[7px] border-2 border-ink cursor-pointer hover:outline hover:outline-[3px] hover:outline-sun"
+              className="text-left flex gap-3 items-center text-[22px] leading-[1.05] px-3 py-[7px] border-2 border-ink cursor-pointer hover:outline hover:outline-[3px] hover:outline-sun"
               style={{ background: o.bg, opacity: o.op }}
             >
-              <div className="flex-none w-7 h-7 bg-ink text-sun font-silk text-[14px] flex items-center justify-center">{o.l}</div>
-              <div>{o.t}</div>
-            </div>
+              <span className="flex-none w-7 h-7 bg-ink text-sun font-silk text-[14px] flex items-center justify-center">{o.l}</span>
+              <span>{o.t}</span>
+            </button>
           ))}
         </div>
       </div>
@@ -54,7 +55,7 @@ export default function QuizScreen({ v }) {
               {v.qFbTitle}
             </div>
             <div className="text-[23px] leading-[1.05] pr-[150px]">{v.qExplain}</div>
-            <div onClick={v.qNext} className="btn-amber absolute right-[14px] bottom-3 font-silk text-[13px] px-[14px] py-2">{v.qNextLabel}</div>
+            <button type="button" onClick={v.qNext} className="btn-amber absolute right-[14px] bottom-3 font-silk text-[13px] px-[14px] py-2">{v.qNextLabel}</button>
           </div>
         </div>
       )}

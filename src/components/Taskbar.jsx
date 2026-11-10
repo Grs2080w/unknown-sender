@@ -3,7 +3,7 @@ export default function Taskbar({ v }) {
   return (
     <div className="absolute left-0 right-0 bottom-0 h-9 bg-sand border-t-[3px] border-white flex items-center gap-[14px] px-[10px] box-border text-[21px]">
       <div className="font-silk text-[13px] px-[10px] py-[3px] bg-beige bevel">NEXORA OS</div>
-      <div onClick={v.toMenu} className="font-silk text-[13px] px-[10px] py-[3px] bg-badbg bevel [--lo:#8c2a22] cursor-pointer">MENU</div>
+      <button type="button" onClick={v.toMenu} className="font-silk text-[13px] px-[10px] py-[3px] bg-badbg bevel [--lo:#8c2a22] cursor-pointer">MENU</button>
       <div className="flex-1 whitespace-nowrap overflow-hidden text-ellipsis">{v.hint}</div>
       <div className="flex gap-1 items-center">
         <span className="text-[18px] mr-1">Escudos</span>
