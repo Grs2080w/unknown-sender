@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* sem preflight: só o necessário para as classes border-* do Tailwind desenharem a borda */
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+    border-style: solid;
+  }
+  /* <button> sem o visual padrão do navegador: o estilo vem das classes de cada botão */
+  button {
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    background: none;
+    border-width: 0; /* não usar o atalho "border: 0": ele apaga o border-style que as classes border-* usam */
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    background: #17140f;
+  }
+}
+
+/* Botões/janelas "retrô" com borda em relevo. Ao clicar (:active) o relevo inverte.
+   Troque a cor da sombra com [--lo:#xxxxxx] e a luz com [--hi:#xxxxxx]. */
+@layer components {
+  .bevel {
+    --hi: #fff;
+    --lo: #6b6552;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--hi) var(--lo) var(--lo) var(--hi);
+  }
+  .bevel:active {
+    border-color: var(--lo) var(--hi) var(--hi) var(--lo);
+  }
+  /* mesma borda, mas sem inverter ao clicar (janelas, painéis) */
+  .bevel-static {
+    --hi: #fff;
+    --lo: #3a3626;
+    border-style: solid;
+    border-color: var(--hi) var(--lo) var(--lo) var(--hi);
+  }
+  /* botões grandes das telas (título, fim, quiz) */
+  .btn-amber,
+  .btn-mint {
+    border-width: 3px;
+    border-style: solid;
+    color: #1b1b2a;
+    cursor: pointer;
+    border-color: var(--hi) var(--lo) var(--lo) var(--hi);
+  }
+  .btn-amber { --hi: #ffe08a; --lo: #7a4a00; background: #ffb000; }
+  .btn-amber:hover { background: #ffc933; }
+  .btn-amber:active { border-color: var(--lo) var(--hi) var(--hi) var(--lo); }
+  .btn-mint { --hi: #d4f5ee; --lo: #1f6f6b; background: #7fd8c8; }
+  .btn-mint:hover { background: #a2e8db; }
+  .btn-mint:active { border-color: var(--lo) var(--hi) var(--hi) var(--lo); }
+  /* grade de fundo do "desktop" */
+  .grid-bg {
+    background:
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 24px),
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 24px);
+  }
+}

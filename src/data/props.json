@@ -1,5 +1,0 @@
-{
-  "lives": { "editor": "int", "default": 3, "tsType": "number", "min": 1, "max": 5, "section": "Jogo" },
-  "textSpeed": { "editor": "range", "default": 2, "tsType": "number", "min": 1, "max": 6, "step": 1, "section": "Jogo" },
-  "crt": { "editor": "boolean", "default": true, "tsType": "boolean", "section": "Visual" }
-}
