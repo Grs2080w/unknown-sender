@@ -1,0 +1,19 @@
+<sc-if value="{{ hasDlg }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ dlgClick }}" style="position:absolute;left:0;right:0;top:0;bottom:36px;background:rgba(8,18,22,.5);display:flex;align-items:flex-end;padding:0 16px 14px;box-sizing:border-box;cursor:pointer;z-index:10">
+<div style="display:flex;gap:12px;align-items:flex-end;width:100%">
+<div style="width:128px;height:150px;flex:none;background:{{ dsp.c }};border:3px solid #1b1b2a;display:flex;align-items:center;justify-content:center;font-family:'Silkscreen',monospace;font-weight:700;font-size:64px;color:#1b1b2a;box-shadow:5px 5px 0 #0007">{{ dsp.i }}</div>
+<div style="flex:1;position:relative;background:#f4efdc;border:3px solid #1b1b2a;box-shadow:5px 5px 0 #0007;padding:22px 20px 14px;min-height:110px;box-sizing:border-box">
+<div style="position:absolute;top:-17px;left:14px;background:{{ dsp.c }};border:3px solid #1b1b2a;padding:0 12px;font-family:'Silkscreen',monospace;font-size:14px;line-height:26px">{{ dsp.n }}</div>
+<div style="font-size:26px;line-height:1.1;min-height:84px">{{ dtext }}</div>
+<sc-if value="{{ dArrow }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;right:16px;bottom:8px;animation:blink 1s infinite;font-size:22px">&#9660;</div></sc-if>
+<sc-if value="{{ dChoices }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
+<sc-for list="{{ choices }}" as="c" hint-placeholder-count="3">
+<div onClick="{{ c.go }}" style="font-size:22px;line-height:1.05;padding:7px 12px;background:#fff;border:2px solid #1b1b2a;cursor:pointer" style-hover="background:#ffd34d">&#9658; {{ c.t }}</div>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</div>
+</div>
+</sc-if>

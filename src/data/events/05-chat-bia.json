@@ -1,0 +1,35 @@
+{
+  "id": "e5",
+  "type": "chat",
+  "time": "10:45",
+  "hint": "Nova mensagem no chat",
+  "name": "Bia (Financeiro)",
+  "c": "#e88cb8",
+  "i": "B",
+  "msgs": [
+    "Oi! Aqui e a Bia, do financeiro.",
+    "Pode me mandar a ata da reuniao de ontem? Ta aqui na mesa do lado, mas meu email caiu."
+  ],
+  "ch": [
+    {
+      "t": "Enviar ata_reuniao.pdf pelo chat da empresa",
+      "ok": true,
+      "hurt": false,
+      "reply": "Mandei! ata_reuniao.pdf",
+      "fb": [
+        "Certo! Voce conhece a Bia, o chat e da empresa e o arquivo e interno.",
+        "Nem tudo e golpe. Pedidos comuns de gente conhecida, por canais oficiais, sao seguros."
+      ]
+    },
+    {
+      "t": "Ignorar. Pode ser golpe",
+      "ok": false,
+      "hurt": false,
+      "reply": "(sem resposta)",
+      "fb": [
+        "Era a Bia mesmo, sentada ao seu lado. Ela ficou sem o arquivo.",
+        "Desconfiar e bom, mas avalie quem pede, por qual canal e o que pede."
+      ]
+    }
+  ]
+}

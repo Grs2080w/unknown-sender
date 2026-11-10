@@ -1,0 +1,46 @@
+{
+  "id": "e6",
+  "type": "chat",
+  "time": "11:20",
+  "hint": "Nova mensagem no chat",
+  "name": "Rogerio (numero novo)",
+  "c": "#f0a060",
+  "i": "R",
+  "msgs": [
+    "Oi, e o Rogerio. Troquei de numero, salva esse aqui.",
+    "Preciso de um favor urgente e sigiloso: compre 3 cartoes-presente de R$100 e me mande os codigos. Eu te reembolso hoje.",
+    "Nao comenta com ninguem, to em reuniao."
+  ],
+  "ch": [
+    {
+      "t": "Comprar os 3 cartoes e enviar os codigos",
+      "ok": false,
+      "hurt": true,
+      "reply": "Ta bom, ja compro!",
+      "fb": [
+        "Era um golpe! O dinheiro foi perdido e nao tem como recuperar os codigos.",
+        "Pedido urgente, sigiloso, de dinheiro, por numero novo: engenharia social."
+      ]
+    },
+    {
+      "t": "Ligar para o ramal do Rogerio e avisar a TI antes de fazer qualquer coisa",
+      "ok": true,
+      "hurt": false,
+      "reply": "Vou confirmar pelo ramal primeiro.",
+      "fb": [
+        "Muito bem! Confirmar por outro canal expos o golpe. O Rogerio nem sabia da mensagem.",
+        "Chefe de verdade nao pede segredo nem cartao-presente."
+      ]
+    },
+    {
+      "t": "Comprar so 1 cartao, por precaucao",
+      "ok": false,
+      "hurt": true,
+      "reply": "Compro 1 por enquanto.",
+      "fb": [
+        "Mesmo 1 cartao ja e prejuizo. O golpista pediria mais depois.",
+        "Antes de pagar qualquer coisa, confirme com a pessoa de verdade."
+      ]
+    }
+  ]
+}

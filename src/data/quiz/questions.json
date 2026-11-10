@@ -1,0 +1,235 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "cat": "Phishing",
+      "scenario": {
+        "kind": "EMAIL",
+        "from": "suporte@banco-seguro-app.com",
+        "subject": "Sua conta será bloqueada em 1 hora!",
+        "lines": [
+          "Clique no link para confirmar seus dados:",
+          "http://banco-seguro-app.com/login"
+        ]
+      },
+      "prompt": "Qual é o principal sinal de que este email é um golpe?",
+      "options": [
+        "O email veio de um banco",
+        "Urgência e ameaça de bloqueio, com link para digitar dados",
+        "O email tem um link",
+        "O email chegou de manhã"
+      ],
+      "answer": 1,
+      "explain": "Golpistas criam pressa e medo para você agir sem pensar. Bancos não pedem dados por link em email. Na dúvida, entre no site ou app oficial digitando o endereço."
+    },
+    {
+      "id": 2,
+      "cat": "Phishing",
+      "scenario": null,
+      "prompt": "Qual destes endereços parece ser o verdadeiro site da loja Nexora?",
+      "options": [
+        "nexora.com.br",
+        "nexora.com.br.promocao-hoje.net",
+        "n3xora.com.br",
+        "nexora-com.br.ofertas.xyz"
+      ],
+      "answer": 0,
+      "explain": "O que vale é o domínio, a parte que vem logo antes do final do endereço. Em 'nexora.com.br.promocao-hoje.net' o domínio real é 'promocao-hoje.net'. Cuidado também com letras trocadas por números, como 'n3xora'."
+    },
+    {
+      "id": 3,
+      "cat": "Malware",
+      "scenario": {
+        "kind": "ARQUIVO",
+        "from": "Baixado de um site de jogos",
+        "subject": "jogo_gratis.pdf.exe",
+        "lines": [
+          "Tamanho: 2,1 MB",
+          "Tipo: Aplicativo"
+        ]
+      },
+      "prompt": "O que é este arquivo?",
+      "options": [
+        "Um PDF normal com instruções",
+        "Um programa disfarçado de documento, provavelmente malware",
+        "Uma imagem do jogo",
+        "Uma atualização segura do sistema"
+      ],
+      "answer": 1,
+      "explain": "A extensão que vale é a última: .exe significa programa. O '.pdf' no meio é um truque para enganar. Não abra e envie para a TI."
+    },
+    {
+      "id": 4,
+      "cat": "Engenharia social",
+      "scenario": {
+        "kind": "LIGAÇÃO",
+        "from": "\"Suporte Técnico\"",
+        "subject": "",
+        "lines": [
+          "Detectamos um vírus no seu computador.",
+          "Me passe sua senha agora ou você perde seus arquivos!"
+        ]
+      },
+      "prompt": "Qual é a melhor reação?",
+      "options": [
+        "Passar a senha para resolver logo",
+        "Passar só metade da senha",
+        "Desligar e não contar para ninguém",
+        "Pedir nome e ramal, ligar de volta pelo número oficial da TI e avisar a TI"
+      ],
+      "answer": 3,
+      "explain": "A TI de verdade nunca pede sua senha. Confirmar a identidade por outro canal desmascara o golpe, e avisar a TI protege os colegas."
+    },
+    {
+      "id": 5,
+      "cat": "Senhas",
+      "scenario": null,
+      "prompt": "Qual destas senhas é a mais forte?",
+      "options": [
+        "123456",
+        "joao2012",
+        "Meu cachorro Rex adora pular 3 vezes!",
+        "senha123"
+      ],
+      "answer": 2,
+      "explain": "Frases longas e únicas são difíceis de adivinhar e fáceis de lembrar. Evite datas, nomes e sequências, e não repita a mesma senha em vários sites."
+    },
+    {
+      "id": 6,
+      "cat": "Malware",
+      "scenario": null,
+      "prompt": "Qual tipo de malware sequestra seus arquivos e exige pagamento para devolvê-los?",
+      "options": [
+        "Ransomware",
+        "Spyware",
+        "Adware",
+        "Worm"
+      ],
+      "answer": 0,
+      "explain": "Ransomware tranca seus arquivos e pede resgate. Spyware espiona, adware mostra propagandas e worm se espalha pela rede. Backups e não abrir anexos suspeitos ajudam a se proteger."
+    },
+    {
+      "id": 7,
+      "cat": "Phishing",
+      "scenario": {
+        "kind": "SMS",
+        "from": "+55 11 9xxxx-0000",
+        "subject": "",
+        "lines": [
+          "Parabéns! Você ganhou um celular novo.",
+          "Resgate agora: bit.ly/premio-ja"
+        ]
+      },
+      "prompt": "O que fazer com essa mensagem?",
+      "options": [
+        "Clicar rápido antes que o prêmio acabe",
+        "Encaminhar para os amigos",
+        "Não clicar, apagar e bloquear o número",
+        "Responder pedindo mais informações"
+      ],
+      "answer": 2,
+      "explain": "Prêmio que você não disputou é isca. Links encurtados escondem o destino. Não clique nem responda, pois responder confirma que seu número existe."
+    },
+    {
+      "id": 8,
+      "cat": "Dispositivos e redes",
+      "scenario": {
+        "kind": "SITUAÇÃO",
+        "from": "Estacionamento da empresa",
+        "subject": "",
+        "lines": [
+          "Você encontra um pen drive com a etiqueta \"SALÁRIOS 2026\"."
+        ]
+      },
+      "prompt": "O que você faz?",
+      "options": [
+        "Conecto para ver de quem é",
+        "Entrego para a TI sem conectar em nenhum computador",
+        "Conecto só no computador de casa",
+        "Formato e uso para meus arquivos"
+      ],
+      "answer": 1,
+      "explain": "Pen drives deixados de propósito são uma isca (baiting). Ao conectar, o malware pode se instalar sozinho. A TI analisa em ambiente isolado."
+    },
+    {
+      "id": 9,
+      "cat": "Dispositivos e redes",
+      "scenario": {
+        "kind": "WI-FI",
+        "from": "Redes disponíveis no café",
+        "subject": "",
+        "lines": [
+          "Cafe_Gratis_Rapido (sem senha)",
+          "CafeCentral (senha informada pelo atendente)"
+        ]
+      },
+      "prompt": "Qual atitude é mais segura?",
+      "options": [
+        "Qualquer rede, é tudo igual",
+        "A sem senha, pois é mais rápida",
+        "A rede oficial informada pelo atendente, evitando dados sensíveis em Wi-Fi público",
+        "Nenhuma rede, nunca usar internet"
+      ],
+      "answer": 2,
+      "explain": "Redes abertas podem ser falsas e espionar o que você faz. Use a rede confirmada pelo local e deixe bancos e senhas para uma conexão confiável, como os dados do celular."
+    },
+    {
+      "id": 10,
+      "cat": "Engenharia social",
+      "scenario": {
+        "kind": "CHAT",
+        "from": "Chefe (número novo)",
+        "subject": "",
+        "lines": [
+          "Oi, troquei de número.",
+          "Preciso de 3 cartões-presente agora. É segredo, não conta pra ninguém."
+        ]
+      },
+      "prompt": "Que tipo de golpe é esse?",
+      "options": [
+        "Engenharia social: o golpista finge ser alguém de confiança",
+        "Ransomware",
+        "Vírus de pen drive",
+        "Falha de atualização"
+      ],
+      "answer": 0,
+      "explain": "Engenharia social engana pessoas, não máquinas. Sinais: número novo, urgência, segredo e pedido de dinheiro. Confirme por outro canal antes de qualquer coisa."
+    },
+    {
+      "id": 11,
+      "cat": "Senhas",
+      "scenario": {
+        "kind": "CHAT",
+        "from": "Colega de outro setor",
+        "subject": "",
+        "lines": [
+          "Me passa o código de 6 dígitos que chegou no seu celular?",
+          "Preciso entrar no sistema rapidinho!"
+        ]
+      },
+      "prompt": "O que você faz?",
+      "options": [
+        "Passo, é um colega",
+        "Passo se ele disser que é urgente",
+        "Passo só metade do código",
+        "Não passo. Código de verificação é pessoal"
+      ],
+      "answer": 3,
+      "explain": "O código de verificação em duas etapas prova que é você. Quem pede esse código quer entrar na sua conta. Nunca compartilhe, nem com colegas."
+    },
+    {
+      "id": 12,
+      "cat": "Malware",
+      "scenario": null,
+      "prompt": "Por que manter o sistema e os aplicativos atualizados ajuda na segurança?",
+      "options": [
+        "Deixa a tela mais bonita",
+        "Não faz diferença",
+        "Corrige falhas que os malwares usam para entrar",
+        "Deixa a internet sempre mais rápida"
+      ],
+      "answer": 2,
+      "explain": "Atualizações corrigem brechas conhecidas. Quem não atualiza continua vulnerável a ataques que já têm solução. Use apenas atualizações vindas do sistema ou da TI, nunca de pop-ups."
+    }
+  ]
+}

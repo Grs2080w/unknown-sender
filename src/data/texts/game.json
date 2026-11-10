@@ -1,0 +1,55 @@
+{
+  "hints": {
+    "preparing": "Preparando o expediente...",
+    "waiting": "Aguardando a proxima tarefa..."
+  },
+  "clockStart": "08:00",
+  "email": {
+    "labelActed": "Atendido",
+    "labelReported": "Denunciado",
+    "resultOk": "Decisao correta",
+    "resultBad": "Decisao errada",
+    "resultPending": "Aguardando"
+  },
+  "files": {
+    "idleDone": "Pasta Downloads organizada.",
+    "idleNone": "Nenhuma tarefa de arquivos agora.",
+    "correct": "Correto! ",
+    "malwareKept": "Ops! Voce deixou um malware na pasta de trabalho. ",
+    "safeFlagged": "Esse arquivo era seguro. ",
+    "statusMoved": "Movido",
+    "statusQuarantine": "Quarentena",
+    "finishDead": "Voce abriu arquivos perigosos demais e a rede caiu...",
+    "finishOk": "Pasta organizada! Lembre: extensao dupla (.pdf.exe), origem desconhecida e pop-ups assustadores sao sinais de malware."
+  },
+  "phone": {
+    "ringing": "Tocando! Clique no fone",
+    "idle": "Linha livre"
+  },
+  "ranks": {
+    "kicker": "EXPEDIENTE ENCERRADO",
+    "dead": { "title": "Empresa infectada", "color": "#ff6b5e" },
+    "perfect": { "title": "Guardiao da Nexora", "color": "#7fe3a0" },
+    "good": { "title": "Funcionario atento", "color": "#ffb000" },
+    "close": { "title": "Quase caiu!", "color": "#ffb000" }
+  },
+  "lessons": [
+    "Desconfie de urgencia, medo e ameacas.",
+    "Confira o endereco real do remetente e para onde o link leva.",
+    "Nunca passe senha, codigos ou dinheiro sem confirmar por outro canal.",
+    "Arquivos com extensao dupla (.pdf.exe) sao programas, nao documentos.",
+    "Dispositivos e arquivos desconhecidos vao para a TI."
+  ],
+  "quiz": {
+    "letters": ["A", "B", "C", "D"],
+    "correctTitle": "CORRETO! +100",
+    "wrongTitle": "QUASE! A resposta certa é a {letter}",
+    "nextLabel": "PRÓXIMA",
+    "resultLabel": "VER RESULTADO",
+    "ranks": [
+      { "min": 0.9, "title": "Especialista em segurança", "color": "#7fe3a0" },
+      { "min": 0.6, "title": "Funcionário atento", "color": "#ffb000" },
+      { "min": 0, "title": "Continue treinando!", "color": "#ff8a7a" }
+    ]
+  }
+}

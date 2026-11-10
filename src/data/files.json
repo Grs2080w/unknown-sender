@@ -1,0 +1,47 @@
+[
+  {
+    "n": "relatorio_vendas_out.xlsx",
+    "ext": "XLS",
+    "kb": "84 KB",
+    "type": "Planilha",
+    "orig": "Anexo do email do Sr. Rogerio",
+    "bad": false,
+    "fb": "Arquivo de trabalho vindo de pessoa conhecida."
+  },
+  {
+    "n": "foto_festa.jpg.exe",
+    "ext": "EXE",
+    "kb": "1,2 MB",
+    "type": "Aplicativo (.exe)",
+    "orig": "Link de um numero desconhecido",
+    "bad": true,
+    "fb": "Parece foto, mas termina em .exe: e um programa. Extensao dupla e truque classico."
+  },
+  {
+    "n": "ata_reuniao.pdf",
+    "ext": "PDF",
+    "kb": "210 KB",
+    "type": "Documento PDF",
+    "orig": "Pasta compartilhada da equipe",
+    "bad": false,
+    "fb": "Documento interno de fonte conhecida."
+  },
+  {
+    "n": "atualizacao_antivirus.exe",
+    "ext": "EXE",
+    "kb": "3,4 MB",
+    "type": "Aplicativo (.exe)",
+    "orig": "Pop-up \"seu PC esta em perigo\"",
+    "bad": true,
+    "fb": "Pop-ups assustadores que oferecem \"antivirus\" costumam instalar malware. Atualizacoes vem da TI."
+  },
+  {
+    "n": "logo_nexora.png",
+    "ext": "PNG",
+    "kb": "56 KB",
+    "type": "Imagem PNG",
+    "orig": "Pasta de marketing da empresa",
+    "bad": false,
+    "fb": "Imagem oficial da empresa."
+  }
+]

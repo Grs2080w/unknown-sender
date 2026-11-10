@@ -1,0 +1,27 @@
+{
+  "marta": {
+    "n": "Marta (TI)",
+    "c": "#4fc3b8",
+    "i": "M"
+  },
+  "rog": {
+    "n": "Sr. Rogerio (Chefe)",
+    "c": "#f0a060",
+    "i": "R"
+  },
+  "bia": {
+    "n": "Bia (Colega)",
+    "c": "#e88cb8",
+    "i": "B"
+  },
+  "ti": {
+    "n": "\"Suporte Tecnico\"",
+    "c": "#b4b4c4",
+    "i": "?"
+  },
+  "eu": {
+    "n": "Voce",
+    "c": "#8fa8f0",
+    "i": "V"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "e3",
+  "type": "phone",
+  "time": "09:15",
+  "hint": "O telefone fixo esta tocando!",
+  "lines": [
+    "Alo? Aqui e do Suporte Tecnico. Detectamos um virus gravissimo no seu computador.",
+    "Preciso da sua senha agora para remover, senao voce perde todos os arquivos hoje!"
+  ],
+  "ch": [
+    {
+      "t": "Passar a senha para resolver logo",
+      "ok": false,
+      "fb": [
+        "Cuidado! Era um golpista. Com a sua senha ele entrou nos sistemas da empresa.",
+        "A TI de verdade nunca pede senha, nem por telefone."
+      ]
+    },
+    {
+      "t": "\"Qual seu nome e ramal? Vou ligar de volta pelo numero oficial da TI.\"",
+      "ok": true,
+      "fb": [
+        "Perfeito! Confirmar por outro canal desmascara o golpe. O golpista desligou na hora.",
+        "Pressa e medo sao as armas da engenharia social."
+      ]
+    },
+    {
+      "t": "Passar so metade da senha",
+      "ok": false,
+      "fb": [
+        "Metade da senha ja ajuda muito o golpista a adivinhar o resto.",
+        "Senha e segredo: nunca se compartilha, nem em partes."
+      ]
+    }
+  ]
+}

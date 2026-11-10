@@ -1,0 +1,24 @@
+{
+  "id": "e1",
+  "type": "email",
+  "time": "08:10",
+  "hint": "Novo email na caixa de entrada",
+  "from": "Rogerio Alves",
+  "addr": "rogerio.alves@nexora.com.br",
+  "subject": "Reuniao de equipe as 15h",
+  "body": [
+    "Bom dia!",
+    "Hoje temos reuniao de equipe as 15h na sala 2. Confirme sua presenca respondendo este email.",
+    "Abs, Rogerio"
+  ],
+  "legit": true,
+  "act": "Responder: \"Confirmado!\"",
+  "good": [
+    "Isso! O endereco e do dominio da empresa (nexora.com.br), o pedido e normal e nao tem link nem anexo.",
+    "Desconfiar de tudo tambem atrapalha o trabalho. O segredo e verificar."
+  ],
+  "bad": [
+    "Calma! Esse email era legitimo: endereco da empresa, sem link e sem anexo.",
+    "Denunciar tudo sobrecarrega a TI. Use \"Inspecionar\" para decidir."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "e9",
+  "type": "email",
+  "time": "16:30",
+  "hint": "Novo email na caixa de entrada",
+  "from": "Marina (RH)",
+  "addr": "rh@nexora.com.br",
+  "subject": "Seu holerite de outubro",
+  "body": [
+    "Oi!",
+    "O holerite de outubro ja esta no portal interno. Acesse pelo atalho da intranet, no seu navegador.",
+    "Nao enviamos documentos por link em email. Qualquer duvida, fale com o RH."
+  ],
+  "legit": true,
+  "act": "Abrir a intranet pelo atalho do navegador",
+  "good": [
+    "Certo! Email interno, sem link e sem anexo, e voce acessou pelo caminho que ja conhece.",
+    "Entrar pelo atalho de sempre, e nao por link, e um bom habito."
+  ],
+  "bad": [
+    "Esse era legitimo: dominio da empresa, sem link e sem anexo.",
+    "Na duvida, inspecione antes de denunciar."
+  ]
+}
