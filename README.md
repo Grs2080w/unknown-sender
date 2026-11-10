@@ -1,40 +1,51 @@
 # unknown-sender
 
-Jogo educativo de cibersegurança (PT-BR) para 11–14 anos.
+Jogo educativo de cibersegurança (PT-BR) para 11–14 anos. React + Vite + Tailwind CSS.
+
+## Rodar
+
+```bash
+npm install
+npm run dev      # servidor de desenvolvimento
+npm run build    # gera dist/
+npm run preview  # serve o dist/
+```
+
+Requer Node 18+ (Vite 5 / Tailwind 3.4).
 
 ## Estrutura
 
 ```
-build.mjs            monta o index.html a partir de src/   (node build.mjs)
-index.html           GERADO — é o que o navegador abre (não edite à mão)
-support.js           runtime do template (gerado, não editar)
+index.html             entrada do Vite
+tailwind.config.js     cores, fontes e animações do tema retrô
 src/
-  template/          HTML dividido em partes (<!-- @include arquivo.html -->)
-    layout.html        moldura: monitor + telefone
-    head.html          fontes
-    screens/           play, title, end, quiz, quiz-end
-    apps/              email, files, chat
-    components/        desktop-icons, taskbar, toast, dialog-box, crt, phone
-  styles/main.css    animações globais
-  data/              TODO o conteúdo do jogo, em JSON
-    characters.json    personagens (nome, cor, inicial)
+  main.jsx             monta o <Game />
+  index.css            Tailwind + classes .bevel / .btn-amber / .btn-mint
+  data/                TODO o conteúdo do jogo, em JSON
+    config.json          vidas, velocidade do texto, efeito CRT
+    characters.json      personagens (nome, cor, inicial)
     dialogue/intro.json  diálogo de abertura
-    events/            um arquivo por tarefa do dia (emails, telefone, chat, cena)
-                       -> textos, respostas, certo/errado e feedback da Marta
-    files.json         arquivos da pasta Downloads
+    events/              um arquivo por tarefa do dia (emails, telefone, chat, cena)
+                         textos, respostas certas/erradas e feedback da Marta
+    files.json           arquivos da pasta Downloads
     quiz/questions.json  perguntas, alternativas, resposta e explicação
-    texts/game.json    textos de interface, ranks, lições finais
-    props.json         opções editáveis (vidas, velocidade do texto, CRT)
-  js/                lógica, um módulo por área
-    dialogue.js        caixa de diálogo
-    flow.js            fluxo do jogo e respostas
-    files-app.js       app de arquivos
-    quiz.js            modo quiz
-    render.js          valores do template
-    component.js       classe principal
+    texts/game.json      textos de interface, ranks, lições finais
+  game/                lógica (sem JSX), um módulo por área
+    data.js              carrega os JSONs
+    Game.jsx             componente principal (estado + junta os módulos)
+    dialogue.js          caixa de diálogo
+    flow.js              fluxo do jogo e respostas
+    files-app.js         app de arquivos
+    quiz.js              modo quiz
+    render.js            valores usados pelos componentes
+  components/          interface
+    Monitor, Phone, DialogBox, Taskbar, Toast, DesktopIcons, Crt
+    screens/             Play, Title, End, Quiz, QuizEnd
+    apps/                AppWindow, EmailApp, FilesApp, ChatApp
 ```
 
 ## Como alterar
 
-- Novo evento/pergunta/texto: edite ou adicione um JSON em `src/data/` (os eventos rodam em ordem alfabética do nome do arquivo, por isso o prefixo `01-`, `02-`...).
-- Depois rode `node build.mjs` e abra o `index.html`.
+- Novo evento/pergunta/texto: edite ou adicione um JSON em `src/data/`. Os eventos rodam em ordem alfabética do nome do arquivo (por isso `01-`, `02-`...).
+- Visual: componentes em `src/components/` com classes Tailwind; cores e fontes em `tailwind.config.js`.
+- O Preflight do Tailwind está desligado de propósito para manter o visual original.
