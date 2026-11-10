@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- GERADO por build.mjs a partir de src/ — não edite à mão. Rode: node build.mjs -->
 <html>
 <head>
 <meta charset="utf-8">
@@ -17,22 +18,6 @@ a{color:#1d4fb8}a:hover{color:#0b2f80}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 @keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
 </style>
-<script type="application/json" id="quiz-data">
-{"questions":[
-{"id":1,"cat":"Phishing","scenario":{"kind":"EMAIL","from":"suporte@banco-seguro-app.com","subject":"Sua conta será bloqueada em 1 hora!","lines":["Clique no link para confirmar seus dados:","http://banco-seguro-app.com/login"]},"prompt":"Qual é o principal sinal de que este email é um golpe?","options":["O email veio de um banco","Urgência e ameaça de bloqueio, com link para digitar dados","O email tem um link","O email chegou de manhã"],"answer":1,"explain":"Golpistas criam pressa e medo para você agir sem pensar. Bancos não pedem dados por link em email. Na dúvida, entre no site ou app oficial digitando o endereço."},
-{"id":2,"cat":"Phishing","scenario":null,"prompt":"Qual destes endereços parece ser o verdadeiro site da loja Nexora?","options":["nexora.com.br","nexora.com.br.promocao-hoje.net","n3xora.com.br","nexora-com.br.ofertas.xyz"],"answer":0,"explain":"O que vale é o domínio, a parte que vem logo antes do final do endereço. Em 'nexora.com.br.promocao-hoje.net' o domínio real é 'promocao-hoje.net'. Cuidado também com letras trocadas por números, como 'n3xora'."},
-{"id":3,"cat":"Malware","scenario":{"kind":"ARQUIVO","from":"Baixado de um site de jogos","subject":"jogo_gratis.pdf.exe","lines":["Tamanho: 2,1 MB","Tipo: Aplicativo"]},"prompt":"O que é este arquivo?","options":["Um PDF normal com instruções","Um programa disfarçado de documento, provavelmente malware","Uma imagem do jogo","Uma atualização segura do sistema"],"answer":1,"explain":"A extensão que vale é a última: .exe significa programa. O '.pdf' no meio é um truque para enganar. Não abra e envie para a TI."},
-{"id":4,"cat":"Engenharia social","scenario":{"kind":"LIGAÇÃO","from":"\"Suporte Técnico\"","subject":"","lines":["Detectamos um vírus no seu computador.","Me passe sua senha agora ou você perde seus arquivos!"]},"prompt":"Qual é a melhor reação?","options":["Passar a senha para resolver logo","Passar só metade da senha","Desligar e não contar para ninguém","Pedir nome e ramal, ligar de volta pelo número oficial da TI e avisar a TI"],"answer":3,"explain":"A TI de verdade nunca pede sua senha. Confirmar a identidade por outro canal desmascara o golpe, e avisar a TI protege os colegas."},
-{"id":5,"cat":"Senhas","scenario":null,"prompt":"Qual destas senhas é a mais forte?","options":["123456","joao2012","Meu cachorro Rex adora pular 3 vezes!","senha123"],"answer":2,"explain":"Frases longas e únicas são difíceis de adivinhar e fáceis de lembrar. Evite datas, nomes e sequências, e não repita a mesma senha em vários sites."},
-{"id":6,"cat":"Malware","scenario":null,"prompt":"Qual tipo de malware sequestra seus arquivos e exige pagamento para devolvê-los?","options":["Ransomware","Spyware","Adware","Worm"],"answer":0,"explain":"Ransomware tranca seus arquivos e pede resgate. Spyware espiona, adware mostra propagandas e worm se espalha pela rede. Backups e não abrir anexos suspeitos ajudam a se proteger."},
-{"id":7,"cat":"Phishing","scenario":{"kind":"SMS","from":"+55 11 9xxxx-0000","subject":"","lines":["Parabéns! Você ganhou um celular novo.","Resgate agora: bit.ly/premio-ja"]},"prompt":"O que fazer com essa mensagem?","options":["Clicar rápido antes que o prêmio acabe","Encaminhar para os amigos","Não clicar, apagar e bloquear o número","Responder pedindo mais informações"],"answer":2,"explain":"Prêmio que você não disputou é isca. Links encurtados escondem o destino. Não clique nem responda, pois responder confirma que seu número existe."},
-{"id":8,"cat":"Dispositivos e redes","scenario":{"kind":"SITUAÇÃO","from":"Estacionamento da empresa","subject":"","lines":["Você encontra um pen drive com a etiqueta \"SALÁRIOS 2026\"."]},"prompt":"O que você faz?","options":["Conecto para ver de quem é","Entrego para a TI sem conectar em nenhum computador","Conecto só no computador de casa","Formato e uso para meus arquivos"],"answer":1,"explain":"Pen drives deixados de propósito são uma isca (baiting). Ao conectar, o malware pode se instalar sozinho. A TI analisa em ambiente isolado."},
-{"id":9,"cat":"Dispositivos e redes","scenario":{"kind":"WI-FI","from":"Redes disponíveis no café","subject":"","lines":["Cafe_Gratis_Rapido (sem senha)","CafeCentral (senha informada pelo atendente)"]},"prompt":"Qual atitude é mais segura?","options":["Qualquer rede, é tudo igual","A sem senha, pois é mais rápida","A rede oficial informada pelo atendente, evitando dados sensíveis em Wi-Fi público","Nenhuma rede, nunca usar internet"],"answer":2,"explain":"Redes abertas podem ser falsas e espionar o que você faz. Use a rede confirmada pelo local e deixe bancos e senhas para uma conexão confiável, como os dados do celular."},
-{"id":10,"cat":"Engenharia social","scenario":{"kind":"CHAT","from":"Chefe (número novo)","subject":"","lines":["Oi, troquei de número.","Preciso de 3 cartões-presente agora. É segredo, não conta pra ninguém."]},"prompt":"Que tipo de golpe é esse?","options":["Engenharia social: o golpista finge ser alguém de confiança","Ransomware","Vírus de pen drive","Falha de atualização"],"answer":0,"explain":"Engenharia social engana pessoas, não máquinas. Sinais: número novo, urgência, segredo e pedido de dinheiro. Confirme por outro canal antes de qualquer coisa."},
-{"id":11,"cat":"Senhas","scenario":{"kind":"CHAT","from":"Colega de outro setor","subject":"","lines":["Me passa o código de 6 dígitos que chegou no seu celular?","Preciso entrar no sistema rapidinho!"]},"prompt":"O que você faz?","options":["Passo, é um colega","Passo se ele disser que é urgente","Passo só metade do código","Não passo. Código de verificação é pessoal"],"answer":3,"explain":"O código de verificação em duas etapas prova que é você. Quem pede esse código quer entrar na sua conta. Nunca compartilhe, nem com colegas."},
-{"id":12,"cat":"Malware","scenario":null,"prompt":"Por que manter o sistema e os aplicativos atualizados ajuda na segurança?","options":["Deixa a tela mais bonita","Não faz diferença","Corrige falhas que os malwares usam para entrar","Deixa a internet sempre mais rápida"],"answer":2,"explain":"Atualizações corrigem brechas conhecidas. Quem não atualiza continua vulnerável a ataques que já têm solução. Use apenas atualizações vindas do sistema ou da TI, nunca de pop-ups."}
-]}
-</script>
 </helmet>
 <div style="min-height:100vh;box-sizing:border-box;padding:24px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 30%,#2a241b,#120f0a);font-family:'VT323',monospace;color:#1b1b2a">
 <div style="display:flex;gap:28px;align-items:flex-end">
@@ -310,100 +295,399 @@ a{color:#1d4fb8}a:hover{color:#0b2f80}
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;lives&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:3,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:5,&quot;section&quot;:&quot;Jogo&quot;},&quot;textSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:2,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:6,&quot;step&quot;:1,&quot;section&quot;:&quot;Jogo&quot;},&quot;crt&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Visual&quot;}}">
-const SP={marta:{n:"Marta (TI)",c:"#4fc3b8",i:"M"},rog:{n:"Sr. Rogerio (Chefe)",c:"#f0a060",i:"R"},bia:{n:"Bia (Colega)",c:"#e88cb8",i:"B"},ti:{n:"\"Suporte Tecnico\"",c:"#b4b4c4",i:"?"},eu:{n:"Voce",c:"#8fa8f0",i:"V"}};
-const EV=[
-{id:"e1",type:"email",time:"08:10",hint:"Novo email na caixa de entrada",from:"Rogerio Alves",addr:"rogerio.alves@nexora.com.br",subject:"Reuniao de equipe as 15h",body:["Bom dia!","Hoje temos reuniao de equipe as 15h na sala 2. Confirme sua presenca respondendo este email.","Abs, Rogerio"],legit:true,act:"Responder: \"Confirmado!\"",good:["Isso! O endereco e do dominio da empresa (nexora.com.br), o pedido e normal e nao tem link nem anexo.","Desconfiar de tudo tambem atrapalha o trabalho. O segredo e verificar."],bad:["Calma! Esse email era legitimo: endereco da empresa, sem link e sem anexo.","Denunciar tudo sobrecarrega a TI. Use \"Inspecionar\" para decidir."]},
-{id:"e2",type:"email",time:"08:40",hint:"Novo email na caixa de entrada",from:"Papelaria Central",addr:"financeiro@papelaria-centra1.com",subject:"URGENTE: boleto vencido, evite multa hoje!",body:["Prezado cliente,","Identificamos um boleto em atraso. Pague HOJE para evitar multa de 30% e bloqueio do seu CNPJ.","Baixe o boleto no anexo ou clique no botao abaixo."],linkLabel:"Baixar boleto agora",url:"http://papelaria-centra1.com/boleto.php?id=88",attach:"boleto_2026.pdf",attachType:"Programa (.exe) - o nome real e boleto_2026.pdf.exe",legit:false,act:"Baixar o boleto",good:["Boa! Sinais de alerta: urgencia, ameaca de multa, endereco com \"centra1\" (numero 1 no lugar de L) e anexo que na verdade e um programa .exe.","Denuncie para a TI e nao clique em nada."],bad:["Ops! O anexo era um programa malicioso (.pdf.exe). Seu computador foi infectado e a TI precisou isola-lo.","Urgencia, ameaca e extensao dupla sao sinais classicos de phishing."]},
-{id:"e3",type:"phone",time:"09:15",hint:"O telefone fixo esta tocando!",lines:["Alo? Aqui e do Suporte Tecnico. Detectamos um virus gravissimo no seu computador.","Preciso da sua senha agora para remover, senao voce perde todos os arquivos hoje!"],ch:[{t:"Passar a senha para resolver logo",ok:false,fb:["Cuidado! Era um golpista. Com a sua senha ele entrou nos sistemas da empresa.","A TI de verdade nunca pede senha, nem por telefone."]},{t:"\"Qual seu nome e ramal? Vou ligar de volta pelo numero oficial da TI.\"",ok:true,fb:["Perfeito! Confirmar por outro canal desmascara o golpe. O golpista desligou na hora.","Pressa e medo sao as armas da engenharia social."]},{t:"Passar so metade da senha",ok:false,fb:["Metade da senha ja ajuda muito o golpista a adivinhar o resto.","Senha e segredo: nunca se compartilha, nem em partes."]}]},
-{id:"e4",type:"files",time:"10:00",hint:"Marta pediu: organize a pasta Downloads"},
-{id:"e5",type:"chat",time:"10:45",hint:"Nova mensagem no chat",name:"Bia (Financeiro)",c:"#e88cb8",i:"B",msgs:["Oi! Aqui e a Bia, do financeiro.","Pode me mandar a ata da reuniao de ontem? Ta aqui na mesa do lado, mas meu email caiu."],ch:[{t:"Enviar ata_reuniao.pdf pelo chat da empresa",ok:true,hurt:false,reply:"Mandei! ata_reuniao.pdf",fb:["Certo! Voce conhece a Bia, o chat e da empresa e o arquivo e interno.","Nem tudo e golpe. Pedidos comuns de gente conhecida, por canais oficiais, sao seguros."]},{t:"Ignorar. Pode ser golpe",ok:false,hurt:false,reply:"(sem resposta)",fb:["Era a Bia mesmo, sentada ao seu lado. Ela ficou sem o arquivo.","Desconfiar e bom, mas avalie quem pede, por qual canal e o que pede."]}]},
-{id:"e6",type:"chat",time:"11:20",hint:"Nova mensagem no chat",name:"Rogerio (numero novo)",c:"#f0a060",i:"R",msgs:["Oi, e o Rogerio. Troquei de numero, salva esse aqui.","Preciso de um favor urgente e sigiloso: compre 3 cartoes-presente de R$100 e me mande os codigos. Eu te reembolso hoje.","Nao comenta com ninguem, to em reuniao."],ch:[{t:"Comprar os 3 cartoes e enviar os codigos",ok:false,hurt:true,reply:"Ta bom, ja compro!",fb:["Era um golpe! O dinheiro foi perdido e nao tem como recuperar os codigos.","Pedido urgente, sigiloso, de dinheiro, por numero novo: engenharia social."]},{t:"Ligar para o ramal do Rogerio e avisar a TI antes de fazer qualquer coisa",ok:true,hurt:false,reply:"Vou confirmar pelo ramal primeiro.",fb:["Muito bem! Confirmar por outro canal expos o golpe. O Rogerio nem sabia da mensagem.","Chefe de verdade nao pede segredo nem cartao-presente."]},{t:"Comprar so 1 cartao, por precaucao",ok:false,hurt:true,reply:"Compro 1 por enquanto.",fb:["Mesmo 1 cartao ja e prejuizo. O golpista pediria mais depois.","Antes de pagar qualquer coisa, confirme com a pessoa de verdade."]}]},
-{id:"e7",type:"scene",time:"12:30",hint:"A Bia esta chegando a sua mesa...",lines:["Olha o que eu achei no estacionamento! Um pen drive escrito \"SALARIOS 2026\".","Que curiosidade... bora ver de quem e? O que a gente faz?"],ch:[{t:"Espetar no meu computador para ver de quem e",ok:false,fb:["O pen drive instalou um malware assim que foi conectado. Isso se chama isca (baiting).","Nunca conecte dispositivos desconhecidos."]},{t:"Entregar para a TI sem conectar em nenhum computador",ok:true,fb:["Exato! A TI analisa em um ambiente isolado e seguro.","Curiosidade e a isca preferida de quem espalha malware."]},{t:"Deixar a Bia espetar no computador dela",ok:false,fb:["O computador da Bia foi infectado e o virus se espalhou pela rede.","O risco nao some so porque o computador e de outra pessoa."]}]},
-{id:"e8",type:"email",time:"14:00",hint:"Novo email na caixa de entrada",from:"Microsoft 365",addr:"seguranca@m1crosoft-login.net",subject:"Sua senha expira HOJE",body:["Ola,","Sua senha de acesso expira em 2 horas. Para manter sua conta ativa, confirme seus dados no link abaixo.","Se nao confirmar, sua conta sera excluida."],linkLabel:"Manter minha senha",url:"http://m1crosoft-login.net/verificar",legit:false,act:"Clicar em \"Manter minha senha\"",good:["Boa! O dominio e falso (\"m1crosoft-login.net\") e a mensagem usa pressa e ameaca para roubar sua senha.","Pagina falsa de login e o tipo mais comum de phishing."],bad:["A pagina era falsa e guardou sua senha. O golpista entrou na sua conta.","Antes de digitar senha, confira o endereco do site. Em caso de duvida, va direto ao site oficial."]},
-{id:"e9",type:"email",time:"16:30",hint:"Novo email na caixa de entrada",from:"Marina (RH)",addr:"rh@nexora.com.br",subject:"Seu holerite de outubro",body:["Oi!","O holerite de outubro ja esta no portal interno. Acesse pelo atalho da intranet, no seu navegador.","Nao enviamos documentos por link em email. Qualquer duvida, fale com o RH."],legit:true,act:"Abrir a intranet pelo atalho do navegador",good:["Certo! Email interno, sem link e sem anexo, e voce acessou pelo caminho que ja conhece.","Entrar pelo atalho de sempre, e nao por link, e um bom habito."],bad:["Esse era legitimo: dominio da empresa, sem link e sem anexo.","Na duvida, inspecione antes de denunciar."]}
-];
-const FILES=[
-{n:"relatorio_vendas_out.xlsx",ext:"XLS",kb:"84 KB",type:"Planilha",orig:"Anexo do email do Sr. Rogerio",bad:false,fb:"Arquivo de trabalho vindo de pessoa conhecida."},
-{n:"foto_festa.jpg.exe",ext:"EXE",kb:"1,2 MB",type:"Aplicativo (.exe)",orig:"Link de um numero desconhecido",bad:true,fb:"Parece foto, mas termina em .exe: e um programa. Extensao dupla e truque classico."},
-{n:"ata_reuniao.pdf",ext:"PDF",kb:"210 KB",type:"Documento PDF",orig:"Pasta compartilhada da equipe",bad:false,fb:"Documento interno de fonte conhecida."},
-{n:"atualizacao_antivirus.exe",ext:"EXE",kb:"3,4 MB",type:"Aplicativo (.exe)",orig:"Pop-up \"seu PC esta em perigo\"",bad:true,fb:"Pop-ups assustadores que oferecem \"antivirus\" costumam instalar malware. Atualizacoes vem da TI."},
-{n:"logo_nexora.png",ext:"PNG",kb:"56 KB",type:"Imagem PNG",orig:"Pasta de marketing da empresa",bad:false,fb:"Imagem oficial da empresa."}
-];
-class Component extends DCLogic{
-state={screen:"title",stage:-1,phase:"between",lives:3,score:0,app:null,sel:null,res:{},reply:{},insp:false,dlg:null,typed:0,toast:null,files:{},selFile:null,fmsg:null,qi:0,qpick:null,qscore:0,qres:[]};
-maxL(){return this.props.lives??3}
-say(lines,cb,choices){clearInterval(this.ti);this.cb=cb||null;this.setState({dlg:{lines,i:0,choices:choices||null},typed:0},()=>this.type())}
-type(){clearInterval(this.ti);const sp=this.props.textSpeed??2;this.ti=setInterval(()=>{const d=this.state.dlg;if(!d){clearInterval(this.ti);return}if(this.state.typed>=d.lines[d.i].t.length){clearInterval(this.ti);return}this.setState(s=>({typed:s.typed+sp}))},22)}
-dlgClick=()=>{const d=this.state.dlg;if(!d)return;const len=d.lines[d.i].t.length;if(this.state.typed<len){clearInterval(this.ti);this.setState({typed:len});return}if(d.i<d.lines.length-1){this.setState({dlg:{...d,i:d.i+1},typed:0},()=>this.type());return}if(d.choices)return;this.setState({dlg:null});const cb=this.cb;this.cb=null;cb&&cb()};
-start=()=>{clearInterval(this.ti);const M=t=>({sp:"marta",t}),R=t=>({sp:"rog",t});this.setState({screen:"play",stage:-1,phase:"between",lives:this.maxL(),score:0,app:null,sel:null,res:{},reply:{},insp:false,files:{},selFile:null,fmsg:null,toast:null},()=>this.say([M("Bem-vindo(a) a Nexora! Eu sou a Marta, da TI."),R("Eu sou o Rogerio, seu chefe. Hoje e seu primeiro dia: emails, ligacoes, mensagens e arquivos."),M("Atencao: qualquer tarefa pode esconder um golpe. Cada erro grave custa um escudo."),M("Use \"Inspecionar\" nos emails para ver o que esta por tras. O telefone fixo fica ao lado do monitor: clique no fone para atender. Boa sorte!")],()=>this.next()))};
-next(){const s=this.state.stage+1;if(s>=EV.length){this.end(true);return}setTimeout(()=>{if(this.state.screen!=="play")return;const ev=EV[s];this.setState({stage:s,phase:"active",toast:ev.hint,insp:false,sel:ev.type==="email"?ev.id:this.state.sel},()=>{setTimeout(()=>this.setState({toast:null}),5000);if(ev.type==="scene")this.scene()})},1600)}
-end(win){clearInterval(this.ti);this.setState({screen:"end",app:null,dlg:null,toast:null})}
-resolve(ok,hurt,fb,id,label){const lives=this.state.lives-(!ok&&hurt?1:0),score=Math.max(0,this.state.score+(ok?100:-50));this.setState(s=>({lives,score,phase:"between",res:{...s.res,[id]:{ok,label}}}));this.say(fb.map(t=>({sp:"marta",t})),()=>lives<=0?this.end(false):this.next())}
-scene(){const ev=EV[this.state.stage];this.say(ev.lines.map(t=>({sp:"bia",t})),null,ev.ch.map(c=>({t:c.t,go:()=>this.resolve(c.ok,!c.ok,c.fb,ev.id,"")})))}
-answer=()=>{const ev=EV[this.state.stage];if(!ev||ev.type!=="phone"||this.state.phase!=="active")return;this.setState({phase:"call",toast:null});this.say(ev.lines.map(t=>({sp:"ti",t})),null,ev.ch.map(c=>({t:c.t,go:()=>this.resolve(c.ok,!c.ok,c.fb,ev.id,"")})))};
-openApp(a){this.setState({app:a,toast:null})}
-fileAct(kind){const s=this.state,f=FILES.find(x=>x.n===s.selFile);if(!f||s.files[f.n])return;const ok=(f.bad&&kind==="quar")||(!f.bad&&kind==="move");let lives=s.lives,score=s.score,msg;if(ok){score+=40;msg="Correto! "+f.fb}else if(f.bad){lives-=1;msg="Ops! Voce deixou um malware na pasta de trabalho. "+f.fb}else{score=Math.max(0,score-20);msg="Esse arquivo era seguro. "+f.fb}const files={...s.files,[f.n]:kind};const all=Object.keys(files).length===FILES.length;this.setState({files,lives,score,fmsg:{ok,t:msg}},()=>{if(!all)return;this.setState(x=>({phase:"between",res:{...x.res,e4:{ok:true,label:""}}}));this.say([{sp:"marta",t:lives<=0?"Voce abriu arquivos perigosos demais e a rede caiu...":"Pasta organizada! Lembre: extensao dupla (.pdf.exe), origem desconhecida e pop-ups assustadores sao sinais de malware."}],()=>lives<=0?this.end(false):this.next())})}
-chatPick(i){const ev=EV[this.state.stage],c=ev.ch[i];this.setState(s=>({reply:{...s.reply,[ev.id]:c.reply}}));this.resolve(c.ok,c.hurt,c.fb,ev.id,"")}
-loadQ(){try{return JSON.parse(document.getElementById("quiz-data").textContent).questions}catch(e){return[]}}
-startQuiz=()=>{clearInterval(this.ti);this.setState({screen:"quiz",qi:0,qpick:null,qscore:0,qres:[],dlg:null})};
-toMenu=()=>{clearInterval(this.ti);this.setState({screen:"title",dlg:null})};
-qPick(i){const s=this.state;if(s.qpick!==null)return;const q=this.Q[s.qi],ok=i===q.answer;this.setState({qpick:i,qscore:s.qscore+(ok?100:0),qres:[...s.qres,{cat:q.cat,ok}]})}
-qNext=()=>{const s=this.state;if(s.qi+1>=this.Q.length)this.setState({screen:"qend"});else this.setState({qi:s.qi+1,qpick:null})};
-quizVals(){const s=this.state;if(s.screen!=="quiz"&&s.screen!=="qend")return{screenQuiz:false,screenQEnd:false,startQuiz:this.startQuiz,toMenu:this.toMenu};
-const Q=this.Q=this.Q&&this.Q.length?this.Q:this.loadQ(),q=Q[s.qi]||Q[0]||{options:[],cat:""};
-const picked=s.qpick!==null,ok=picked&&s.qpick===q.answer,L=["A","B","C","D"];
-const cats={};Q.forEach(x=>{cats[x.cat]=cats[x.cat]||{n:x.cat,ok:0,t:0}});s.qres.forEach(r=>{cats[r.cat].t++;if(r.ok)cats[r.cat].ok++});
-const nOk=s.qres.filter(r=>r.ok).length,pct=Q.length?nOk/Q.length:0;
-const rk=pct>=.9?["Especialista em segurança","#7fe3a0"]:pct>=.6?["Funcionário atento","#ffb000"]:["Continue treinando!","#ff8a7a"];
-const scn=q.scenario;
-return{screenQuiz:s.screen==="quiz",screenQEnd:s.screen==="qend",startQuiz:this.startQuiz,toMenu:this.toMenu,
-qNum:s.qi+1,qTotal:Q.length,qCat:q.cat,qPct:((s.qi+(picked?1:0))/Math.max(1,Q.length)*100)+"%",qScore:s.qscore,
-hasScn:!!scn,scn:scn?{kind:scn.kind,from:scn.from,subject:scn.subject,hasSubj:!!scn.subject,lines:scn.lines.map(t=>({t}))}:{lines:[]},
-qPrompt:q.prompt,qOpts:q.options.map((t,i)=>({t,l:L[i],bg:!picked?"#f4efdc":i===q.answer?"#bfe3c4":i===s.qpick?"#f2a9a2":"#f4efdc",op:picked&&i!==q.answer&&i!==s.qpick?.5:1,go:()=>this.qPick(i)})),
-qAnswered:picked,qFbTitle:ok?"CORRETO! +100":"QUASE! A resposta certa é a "+L[q.answer],qFbColor:ok?"#7fe3a0":"#f2a9a2",qExplain:q.explain,qNextLabel:s.qi+1>=Q.length?"VER RESULTADO":"PRÓXIMA",qNext:this.qNext,
-qEndTitle:rk[0],qEndColor:rk[1],qCorrect:nOk,qCats:Object.values(cats).map(c=>({n:c.n,r:c.ok+"/"+c.t,col:c.ok===c.t?"#7fe3a0":c.ok===0?"#ff8a7a":"#ffb000"}))}}
-componentWillUnmount(){clearInterval(this.ti)}
-renderVals(){
-const s=this.state,P=this.props,ev=EV[s.stage],act=!!ev&&s.phase==="active";
-const emails=EV.filter((e,i)=>e.type==="email"&&i<=s.stage).map(e=>{const r=s.res[e.id];return{from:e.from,subject:e.subject,time:e.time,tag:r?r.label.toUpperCase():"NOVO",tagBg:r?(r.ok?"#bfe3c4":"#f2a9a2"):"#ffd34d",bg:s.sel===e.id?"#cfe0f5":"transparent",pick:()=>this.setState({sel:e.id,insp:false})}}).reverse();
-const se0=EV.find(e=>e.id===s.sel&&e.type==="email");
-const se=se0?{...se0,body:se0.body.map(t=>({t})),hasLink:!!se0.url,hasAttach:!!se0.attach,linkLabel:se0.linkLabel}:{};
-const canAct=!!se0&&act&&ev.id===se0.id,rs=se0&&s.res[se0.id];
-const sf0=FILES.find(f=>f.n===s.selFile);
-const filesActive=!!ev&&ev.type==="files"&&(s.phase==="active"||Object.keys(s.files).length>0);
-const fileOpen=!!sf0&&!s.files[sf0.n];
-const chatEv=[...EV].slice(0,Math.max(0,s.stage+1)).reverse().find(e=>e.type==="chat");
-const chatCan=!!chatEv&&act&&ev.id===chatEv.id;
-let chatMsgs=[];if(chatEv){chatMsgs=chatEv.msgs.map(t=>({t,side:"flex-start",bg:"#e8e2cf"}));if(s.reply[chatEv.id])chatMsgs.push({t:s.reply[chatEv.id],side:"flex-end",bg:"#bfe3c4"})}
-const ringing=!!ev&&ev.type==="phone"&&s.phase==="active";
-const mkIc=(k,label,glyph,bg,badge)=>({label,glyph,bg,badge,go:()=>this.openApp(k)});
-const d=s.dlg,dl=d&&d.lines[d.i],dd=d&&s.typed>=dl.t.length,showCh=!!d&&!!d.choices&&d.i===d.lines.length-1&&dd;
-const dsp=dl?SP[dl.sp]:{n:"",c:"#fff",i:""};
-const hr=s.res[ev&&ev.id];
-const M=this.maxL();
-const w=s.lives>0;
-const rank=s.lives<=0?["EXPEDIENTE ENCERRADO","Empresa infectada","#ff6b5e"]:s.lives>=M?["EXPEDIENTE ENCERRADO","Guardiao da Nexora","#7fe3a0"]:s.lives>1?["EXPEDIENTE ENCERRADO","Funcionario atento","#ffb000"]:["EXPEDIENTE ENCERRADO","Quase caiu!","#ffb000"];
-const handset=React.createElement("div",{onClick:this.answer,style:{width:150,height:46,borderRadius:23,background:"#2b2722",boxShadow:"inset 0 4px 0 #4a443b, 0 4px 0 #0006",cursor:ringing?"pointer":"default",animation:ringing?"ring .5s infinite":"none",display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0 10px",boxSizing:"border-box"}},React.createElement("div",{style:{width:34,height:30,borderRadius:15,background:"#3d372f"}}),React.createElement("div",{style:{width:34,height:30,borderRadius:15,background:"#3d372f"}}));
-return{...this.quizVals(),
-screenTitle:s.screen==="title",screenPlay:s.screen==="play",screenEnd:s.screen==="end",
-start:this.start,crtOpacity:P.crt===false?0:1,
-icons:[mkIc("email","Email","@","#9fc4f5",!!ev&&ev.type==="email"&&act),mkIc("files","Arquivos","[]","#f5d98a",!!ev&&ev.type==="files"&&act),mkIc("chat","Chat","...","#b9e6b0",!!chatEv&&chatCan)],
-showEmail:s.app==="email",showFiles:s.app==="files",showChat:s.app==="chat",closeApp:()=>this.setState({app:null}),
-emails,noEmails:emails.length===0,se,hasSel:!!se0,noSel:!se0,canAct,resolvedSel:!!se0&&!canAct,selResult:rs?(rs.ok?"Decisao correta":"Decisao errada")+" ("+rs.label+")":"Aguardando",
-insp:s.insp,toggleInsp:()=>this.setState({insp:!s.insp}),
-doAct:()=>this.resolve(se0.legit,!se0.legit,se0.legit?se0.good:se0.bad,se0.id,"Atendido"),
-doReport:()=>this.resolve(!se0.legit,false,se0.legit?se0.bad:se0.good,se0.id,"Denunciado"),
-filesActive,filesIdle:!filesActive,filesIdleMsg:s.res.e4?"Pasta Downloads organizada.":"Nenhuma tarefa de arquivos agora.",
-files:FILES.map(f=>{const st=s.files[f.n];return{n:f.n,ext:f.ext,kb:f.kb,status:st?(st==="move"?"Movido":"Quarentena"):"",op:st?0.55:1,bd:s.selFile===f.n?"#1d4fb8":"#cfc7ae",bg:s.selFile===f.n?"#dbe8fa":"#fffdf5",pick:()=>this.setState({selFile:f.n})}}),
-hasFile:!!sf0,noFile:!sf0,sf:sf0||{},fileOpen,fMove:()=>this.fileAct("move"),fQuar:()=>this.fileAct("quar"),hasFmsg:!!s.fmsg,fmsg:s.fmsg?s.fmsg.t:"",fmsgBg:s.fmsg&&s.fmsg.ok?"#bfe3c4":"#f2a9a2",
-hasChat:!!chatEv,noChat:!chatEv,chat:chatEv||{},chatMsgs,chatCan,chatChoices:chatEv?chatEv.ch.map((c,i)=>({t:c.t,go:()=>this.chatPick(i)})):[],
-hasToast:!!s.toast,toast:s.toast,hint:ev&&act?ev.hint:(s.stage<0?"Preparando o expediente...":"Aguardando a proxima tarefa..."),
-shields:Array.from({length:M},(_,i)=>({c:i<s.lives?"#3fae5a":"#8a8168"})),score:s.score,lives:s.lives,clock:ev?ev.time:"08:00",
-hasDlg:!!d,dlgClick:this.dlgClick,dsp,dtext:dl?dl.t.slice(0,s.typed):"",dArrow:!!d&&dd&&!showCh,dChoices:showCh,choices:showCh?d.choices.map(c=>({t:c.t,go:()=>{this.setState({dlg:null});c.go()}})):[],
-endKicker:rank[0],endTitle:rank[1],endColor:rank[2],
-lessons:["Desconfie de urgencia, medo e ameacas.","Confira o endereco real do remetente e para onde o link leva.","Nunca passe senha, codigos ou dinheiro sem confirmar por outro canal.","Arquivos com extensao dupla (.pdf.exe) sao programas, nao documentos.","Dispositivos e arquivos desconhecidos vao para a TI."].map(t=>({t})),
-phoneHandset:handset,ledColor:ringing?"#e04a3f":"#6b6552",phoneLabel:ringing?"Tocando! Clique no fone":"Linha livre",
-keys:["1","2","3","4","5","6","7","8","9","*","0","#"].map(k=>({k}))}}}
+const SP = {"marta":{"n":"Marta (TI)","c":"#4fc3b8","i":"M"},"rog":{"n":"Sr. Rogerio (Chefe)","c":"#f0a060","i":"R"},"bia":{"n":"Bia (Colega)","c":"#e88cb8","i":"B"},"ti":{"n":"\"Suporte Tecnico\"","c":"#b4b4c4","i":"?"},"eu":{"n":"Voce","c":"#8fa8f0","i":"V"}};
+const EV = [{"id":"e1","type":"email","time":"08:10","hint":"Novo email na caixa de entrada","from":"Rogerio Alves","addr":"rogerio.alves@nexora.com.br","subject":"Reuniao de equipe as 15h","body":["Bom dia!","Hoje temos reuniao de equipe as 15h na sala 2. Confirme sua presenca respondendo este email.","Abs, Rogerio"],"legit":true,"act":"Responder: \"Confirmado!\"","good":["Isso! O endereco e do dominio da empresa (nexora.com.br), o pedido e normal e nao tem link nem anexo.","Desconfiar de tudo tambem atrapalha o trabalho. O segredo e verificar."],"bad":["Calma! Esse email era legitimo: endereco da empresa, sem link e sem anexo.","Denunciar tudo sobrecarrega a TI. Use \"Inspecionar\" para decidir."]},{"id":"e2","type":"email","time":"08:40","hint":"Novo email na caixa de entrada","from":"Papelaria Central","addr":"financeiro@papelaria-centra1.com","subject":"URGENTE: boleto vencido, evite multa hoje!","body":["Prezado cliente,","Identificamos um boleto em atraso. Pague HOJE para evitar multa de 30% e bloqueio do seu CNPJ.","Baixe o boleto no anexo ou clique no botao abaixo."],"linkLabel":"Baixar boleto agora","url":"http://papelaria-centra1.com/boleto.php?id=88","attach":"boleto_2026.pdf","attachType":"Programa (.exe) - o nome real e boleto_2026.pdf.exe","legit":false,"act":"Baixar o boleto","good":["Boa! Sinais de alerta: urgencia, ameaca de multa, endereco com \"centra1\" (numero 1 no lugar de L) e anexo que na verdade e um programa .exe.","Denuncie para a TI e nao clique em nada."],"bad":["Ops! O anexo era um programa malicioso (.pdf.exe). Seu computador foi infectado e a TI precisou isola-lo.","Urgencia, ameaca e extensao dupla sao sinais classicos de phishing."]},{"id":"e3","type":"phone","time":"09:15","hint":"O telefone fixo esta tocando!","lines":["Alo? Aqui e do Suporte Tecnico. Detectamos um virus gravissimo no seu computador.","Preciso da sua senha agora para remover, senao voce perde todos os arquivos hoje!"],"ch":[{"t":"Passar a senha para resolver logo","ok":false,"fb":["Cuidado! Era um golpista. Com a sua senha ele entrou nos sistemas da empresa.","A TI de verdade nunca pede senha, nem por telefone."]},{"t":"\"Qual seu nome e ramal? Vou ligar de volta pelo numero oficial da TI.\"","ok":true,"fb":["Perfeito! Confirmar por outro canal desmascara o golpe. O golpista desligou na hora.","Pressa e medo sao as armas da engenharia social."]},{"t":"Passar so metade da senha","ok":false,"fb":["Metade da senha ja ajuda muito o golpista a adivinhar o resto.","Senha e segredo: nunca se compartilha, nem em partes."]}]},{"id":"e4","type":"files","time":"10:00","hint":"Marta pediu: organize a pasta Downloads"},{"id":"e5","type":"chat","time":"10:45","hint":"Nova mensagem no chat","name":"Bia (Financeiro)","c":"#e88cb8","i":"B","msgs":["Oi! Aqui e a Bia, do financeiro.","Pode me mandar a ata da reuniao de ontem? Ta aqui na mesa do lado, mas meu email caiu."],"ch":[{"t":"Enviar ata_reuniao.pdf pelo chat da empresa","ok":true,"hurt":false,"reply":"Mandei! ata_reuniao.pdf","fb":["Certo! Voce conhece a Bia, o chat e da empresa e o arquivo e interno.","Nem tudo e golpe. Pedidos comuns de gente conhecida, por canais oficiais, sao seguros."]},{"t":"Ignorar. Pode ser golpe","ok":false,"hurt":false,"reply":"(sem resposta)","fb":["Era a Bia mesmo, sentada ao seu lado. Ela ficou sem o arquivo.","Desconfiar e bom, mas avalie quem pede, por qual canal e o que pede."]}]},{"id":"e6","type":"chat","time":"11:20","hint":"Nova mensagem no chat","name":"Rogerio (numero novo)","c":"#f0a060","i":"R","msgs":["Oi, e o Rogerio. Troquei de numero, salva esse aqui.","Preciso de um favor urgente e sigiloso: compre 3 cartoes-presente de R$100 e me mande os codigos. Eu te reembolso hoje.","Nao comenta com ninguem, to em reuniao."],"ch":[{"t":"Comprar os 3 cartoes e enviar os codigos","ok":false,"hurt":true,"reply":"Ta bom, ja compro!","fb":["Era um golpe! O dinheiro foi perdido e nao tem como recuperar os codigos.","Pedido urgente, sigiloso, de dinheiro, por numero novo: engenharia social."]},{"t":"Ligar para o ramal do Rogerio e avisar a TI antes de fazer qualquer coisa","ok":true,"hurt":false,"reply":"Vou confirmar pelo ramal primeiro.","fb":["Muito bem! Confirmar por outro canal expos o golpe. O Rogerio nem sabia da mensagem.","Chefe de verdade nao pede segredo nem cartao-presente."]},{"t":"Comprar so 1 cartao, por precaucao","ok":false,"hurt":true,"reply":"Compro 1 por enquanto.","fb":["Mesmo 1 cartao ja e prejuizo. O golpista pediria mais depois.","Antes de pagar qualquer coisa, confirme com a pessoa de verdade."]}]},{"id":"e7","type":"scene","time":"12:30","hint":"A Bia esta chegando a sua mesa...","lines":["Olha o que eu achei no estacionamento! Um pen drive escrito \"SALARIOS 2026\".","Que curiosidade... bora ver de quem e? O que a gente faz?"],"ch":[{"t":"Espetar no meu computador para ver de quem e","ok":false,"fb":["O pen drive instalou um malware assim que foi conectado. Isso se chama isca (baiting).","Nunca conecte dispositivos desconhecidos."]},{"t":"Entregar para a TI sem conectar em nenhum computador","ok":true,"fb":["Exato! A TI analisa em um ambiente isolado e seguro.","Curiosidade e a isca preferida de quem espalha malware."]},{"t":"Deixar a Bia espetar no computador dela","ok":false,"fb":["O computador da Bia foi infectado e o virus se espalhou pela rede.","O risco nao some so porque o computador e de outra pessoa."]}]},{"id":"e8","type":"email","time":"14:00","hint":"Novo email na caixa de entrada","from":"Microsoft 365","addr":"seguranca@m1crosoft-login.net","subject":"Sua senha expira HOJE","body":["Ola,","Sua senha de acesso expira em 2 horas. Para manter sua conta ativa, confirme seus dados no link abaixo.","Se nao confirmar, sua conta sera excluida."],"linkLabel":"Manter minha senha","url":"http://m1crosoft-login.net/verificar","legit":false,"act":"Clicar em \"Manter minha senha\"","good":["Boa! O dominio e falso (\"m1crosoft-login.net\") e a mensagem usa pressa e ameaca para roubar sua senha.","Pagina falsa de login e o tipo mais comum de phishing."],"bad":["A pagina era falsa e guardou sua senha. O golpista entrou na sua conta.","Antes de digitar senha, confira o endereco do site. Em caso de duvida, va direto ao site oficial."]},{"id":"e9","type":"email","time":"16:30","hint":"Novo email na caixa de entrada","from":"Marina (RH)","addr":"rh@nexora.com.br","subject":"Seu holerite de outubro","body":["Oi!","O holerite de outubro ja esta no portal interno. Acesse pelo atalho da intranet, no seu navegador.","Nao enviamos documentos por link em email. Qualquer duvida, fale com o RH."],"legit":true,"act":"Abrir a intranet pelo atalho do navegador","good":["Certo! Email interno, sem link e sem anexo, e voce acessou pelo caminho que ja conhece.","Entrar pelo atalho de sempre, e nao por link, e um bom habito."],"bad":["Esse era legitimo: dominio da empresa, sem link e sem anexo.","Na duvida, inspecione antes de denunciar."]}];
+const FILES = [{"n":"relatorio_vendas_out.xlsx","ext":"XLS","kb":"84 KB","type":"Planilha","orig":"Anexo do email do Sr. Rogerio","bad":false,"fb":"Arquivo de trabalho vindo de pessoa conhecida."},{"n":"foto_festa.jpg.exe","ext":"EXE","kb":"1,2 MB","type":"Aplicativo (.exe)","orig":"Link de um numero desconhecido","bad":true,"fb":"Parece foto, mas termina em .exe: e um programa. Extensao dupla e truque classico."},{"n":"ata_reuniao.pdf","ext":"PDF","kb":"210 KB","type":"Documento PDF","orig":"Pasta compartilhada da equipe","bad":false,"fb":"Documento interno de fonte conhecida."},{"n":"atualizacao_antivirus.exe","ext":"EXE","kb":"3,4 MB","type":"Aplicativo (.exe)","orig":"Pop-up \"seu PC esta em perigo\"","bad":true,"fb":"Pop-ups assustadores que oferecem \"antivirus\" costumam instalar malware. Atualizacoes vem da TI."},{"n":"logo_nexora.png","ext":"PNG","kb":"56 KB","type":"Imagem PNG","orig":"Pasta de marketing da empresa","bad":false,"fb":"Imagem oficial da empresa."}];
+const INTRO = [{"sp":"marta","t":"Bem-vindo(a) a Nexora! Eu sou a Marta, da TI."},{"sp":"rog","t":"Eu sou o Rogerio, seu chefe. Hoje e seu primeiro dia: emails, ligacoes, mensagens e arquivos."},{"sp":"marta","t":"Atencao: qualquer tarefa pode esconder um golpe. Cada erro grave custa um escudo."},{"sp":"marta","t":"Use \"Inspecionar\" nos emails para ver o que esta por tras. O telefone fixo fica ao lado do monitor: clique no fone para atender. Boa sorte!"}];
+const QUIZ = {"questions":[{"id":1,"cat":"Phishing","scenario":{"kind":"EMAIL","from":"suporte@banco-seguro-app.com","subject":"Sua conta será bloqueada em 1 hora!","lines":["Clique no link para confirmar seus dados:","http://banco-seguro-app.com/login"]},"prompt":"Qual é o principal sinal de que este email é um golpe?","options":["O email veio de um banco","Urgência e ameaça de bloqueio, com link para digitar dados","O email tem um link","O email chegou de manhã"],"answer":1,"explain":"Golpistas criam pressa e medo para você agir sem pensar. Bancos não pedem dados por link em email. Na dúvida, entre no site ou app oficial digitando o endereço."},{"id":2,"cat":"Phishing","scenario":null,"prompt":"Qual destes endereços parece ser o verdadeiro site da loja Nexora?","options":["nexora.com.br","nexora.com.br.promocao-hoje.net","n3xora.com.br","nexora-com.br.ofertas.xyz"],"answer":0,"explain":"O que vale é o domínio, a parte que vem logo antes do final do endereço. Em 'nexora.com.br.promocao-hoje.net' o domínio real é 'promocao-hoje.net'. Cuidado também com letras trocadas por números, como 'n3xora'."},{"id":3,"cat":"Malware","scenario":{"kind":"ARQUIVO","from":"Baixado de um site de jogos","subject":"jogo_gratis.pdf.exe","lines":["Tamanho: 2,1 MB","Tipo: Aplicativo"]},"prompt":"O que é este arquivo?","options":["Um PDF normal com instruções","Um programa disfarçado de documento, provavelmente malware","Uma imagem do jogo","Uma atualização segura do sistema"],"answer":1,"explain":"A extensão que vale é a última: .exe significa programa. O '.pdf' no meio é um truque para enganar. Não abra e envie para a TI."},{"id":4,"cat":"Engenharia social","scenario":{"kind":"LIGAÇÃO","from":"\"Suporte Técnico\"","subject":"","lines":["Detectamos um vírus no seu computador.","Me passe sua senha agora ou você perde seus arquivos!"]},"prompt":"Qual é a melhor reação?","options":["Passar a senha para resolver logo","Passar só metade da senha","Desligar e não contar para ninguém","Pedir nome e ramal, ligar de volta pelo número oficial da TI e avisar a TI"],"answer":3,"explain":"A TI de verdade nunca pede sua senha. Confirmar a identidade por outro canal desmascara o golpe, e avisar a TI protege os colegas."},{"id":5,"cat":"Senhas","scenario":null,"prompt":"Qual destas senhas é a mais forte?","options":["123456","joao2012","Meu cachorro Rex adora pular 3 vezes!","senha123"],"answer":2,"explain":"Frases longas e únicas são difíceis de adivinhar e fáceis de lembrar. Evite datas, nomes e sequências, e não repita a mesma senha em vários sites."},{"id":6,"cat":"Malware","scenario":null,"prompt":"Qual tipo de malware sequestra seus arquivos e exige pagamento para devolvê-los?","options":["Ransomware","Spyware","Adware","Worm"],"answer":0,"explain":"Ransomware tranca seus arquivos e pede resgate. Spyware espiona, adware mostra propagandas e worm se espalha pela rede. Backups e não abrir anexos suspeitos ajudam a se proteger."},{"id":7,"cat":"Phishing","scenario":{"kind":"SMS","from":"+55 11 9xxxx-0000","subject":"","lines":["Parabéns! Você ganhou um celular novo.","Resgate agora: bit.ly/premio-ja"]},"prompt":"O que fazer com essa mensagem?","options":["Clicar rápido antes que o prêmio acabe","Encaminhar para os amigos","Não clicar, apagar e bloquear o número","Responder pedindo mais informações"],"answer":2,"explain":"Prêmio que você não disputou é isca. Links encurtados escondem o destino. Não clique nem responda, pois responder confirma que seu número existe."},{"id":8,"cat":"Dispositivos e redes","scenario":{"kind":"SITUAÇÃO","from":"Estacionamento da empresa","subject":"","lines":["Você encontra um pen drive com a etiqueta \"SALÁRIOS 2026\"."]},"prompt":"O que você faz?","options":["Conecto para ver de quem é","Entrego para a TI sem conectar em nenhum computador","Conecto só no computador de casa","Formato e uso para meus arquivos"],"answer":1,"explain":"Pen drives deixados de propósito são uma isca (baiting). Ao conectar, o malware pode se instalar sozinho. A TI analisa em ambiente isolado."},{"id":9,"cat":"Dispositivos e redes","scenario":{"kind":"WI-FI","from":"Redes disponíveis no café","subject":"","lines":["Cafe_Gratis_Rapido (sem senha)","CafeCentral (senha informada pelo atendente)"]},"prompt":"Qual atitude é mais segura?","options":["Qualquer rede, é tudo igual","A sem senha, pois é mais rápida","A rede oficial informada pelo atendente, evitando dados sensíveis em Wi-Fi público","Nenhuma rede, nunca usar internet"],"answer":2,"explain":"Redes abertas podem ser falsas e espionar o que você faz. Use a rede confirmada pelo local e deixe bancos e senhas para uma conexão confiável, como os dados do celular."},{"id":10,"cat":"Engenharia social","scenario":{"kind":"CHAT","from":"Chefe (número novo)","subject":"","lines":["Oi, troquei de número.","Preciso de 3 cartões-presente agora. É segredo, não conta pra ninguém."]},"prompt":"Que tipo de golpe é esse?","options":["Engenharia social: o golpista finge ser alguém de confiança","Ransomware","Vírus de pen drive","Falha de atualização"],"answer":0,"explain":"Engenharia social engana pessoas, não máquinas. Sinais: número novo, urgência, segredo e pedido de dinheiro. Confirme por outro canal antes de qualquer coisa."},{"id":11,"cat":"Senhas","scenario":{"kind":"CHAT","from":"Colega de outro setor","subject":"","lines":["Me passa o código de 6 dígitos que chegou no seu celular?","Preciso entrar no sistema rapidinho!"]},"prompt":"O que você faz?","options":["Passo, é um colega","Passo se ele disser que é urgente","Passo só metade do código","Não passo. Código de verificação é pessoal"],"answer":3,"explain":"O código de verificação em duas etapas prova que é você. Quem pede esse código quer entrar na sua conta. Nunca compartilhe, nem com colegas."},{"id":12,"cat":"Malware","scenario":null,"prompt":"Por que manter o sistema e os aplicativos atualizados ajuda na segurança?","options":["Deixa a tela mais bonita","Não faz diferença","Corrige falhas que os malwares usam para entrar","Deixa a internet sempre mais rápida"],"answer":2,"explain":"Atualizações corrigem brechas conhecidas. Quem não atualiza continua vulnerável a ataques que já têm solução. Use apenas atualizações vindas do sistema ou da TI, nunca de pop-ups."}]};
+const TEXT = {"hints":{"preparing":"Preparando o expediente...","waiting":"Aguardando a proxima tarefa..."},"clockStart":"08:00","email":{"labelActed":"Atendido","labelReported":"Denunciado","resultOk":"Decisao correta","resultBad":"Decisao errada","resultPending":"Aguardando"},"files":{"idleDone":"Pasta Downloads organizada.","idleNone":"Nenhuma tarefa de arquivos agora.","correct":"Correto! ","malwareKept":"Ops! Voce deixou um malware na pasta de trabalho. ","safeFlagged":"Esse arquivo era seguro. ","statusMoved":"Movido","statusQuarantine":"Quarentena","finishDead":"Voce abriu arquivos perigosos demais e a rede caiu...","finishOk":"Pasta organizada! Lembre: extensao dupla (.pdf.exe), origem desconhecida e pop-ups assustadores sao sinais de malware."},"phone":{"ringing":"Tocando! Clique no fone","idle":"Linha livre"},"ranks":{"kicker":"EXPEDIENTE ENCERRADO","dead":{"title":"Empresa infectada","color":"#ff6b5e"},"perfect":{"title":"Guardiao da Nexora","color":"#7fe3a0"},"good":{"title":"Funcionario atento","color":"#ffb000"},"close":{"title":"Quase caiu!","color":"#ffb000"}},"lessons":["Desconfie de urgencia, medo e ameacas.","Confira o endereco real do remetente e para onde o link leva.","Nunca passe senha, codigos ou dinheiro sem confirmar por outro canal.","Arquivos com extensao dupla (.pdf.exe) sao programas, nao documentos.","Dispositivos e arquivos desconhecidos vao para a TI."],"quiz":{"letters":["A","B","C","D"],"correctTitle":"CORRETO! +100","wrongTitle":"QUASE! A resposta certa é a {letter}","nextLabel":"PRÓXIMA","resultLabel":"VER RESULTADO","ranks":[{"min":0.9,"title":"Especialista em segurança","color":"#7fe3a0"},{"min":0.6,"title":"Funcionário atento","color":"#ffb000"},{"min":0,"title":"Continue treinando!","color":"#ff8a7a"}]}};
+// Caixa de diálogo estilo Visual Novel: texto digitado letra a letra, clique para avançar.
+const DialogueLogic = {
+  // lines: [{sp, t}], cb: chamado ao fim, choices: [{t, go}] opcionais na última fala
+  say(lines, cb, choices) {
+    clearInterval(this.ti);
+    this.cb = cb || null;
+    this.setState({ dlg: { lines, i: 0, choices: choices || null }, typed: 0 }, () => this.type());
+  },
+
+  type() {
+    clearInterval(this.ti);
+    const sp = this.props.textSpeed ?? 2;
+    this.ti = setInterval(() => {
+      const d = this.state.dlg;
+      if (!d) { clearInterval(this.ti); return; }
+      if (this.state.typed >= d.lines[d.i].t.length) { clearInterval(this.ti); return; }
+      this.setState(s => ({ typed: s.typed + sp }));
+    }, 22);
+  },
+
+  dlgClick() {
+    const d = this.state.dlg;
+    if (!d) return;
+    const len = d.lines[d.i].t.length;
+    // 1º clique completa o texto
+    if (this.state.typed < len) { clearInterval(this.ti); this.setState({ typed: len }); return; }
+    // próxima fala
+    if (d.i < d.lines.length - 1) { this.setState({ dlg: { ...d, i: d.i + 1 }, typed: 0 }, () => this.type()); return; }
+    // última fala com escolhas: espera o jogador escolher
+    if (d.choices) return;
+    this.setState({ dlg: null });
+    const cb = this.cb;
+    this.cb = null;
+    cb && cb();
+  },
+};
+
+// Fluxo do modo interativo: início, avanço de eventos, resolução de respostas, fim de jogo.
+const FlowLogic = {
+  maxL() { return this.props.lives ?? 3; },
+
+  start() {
+    clearInterval(this.ti);
+    this.setState({
+      screen: "play", stage: -1, phase: "between", lives: this.maxL(), score: 0,
+      app: null, sel: null, res: {}, reply: {}, insp: false, files: {}, selFile: null, fmsg: null, toast: null,
+    }, () => this.say(INTRO, () => this.next()));
+  },
+
+  // Agenda o próximo evento da lista EV (ou encerra se acabaram)
+  next() {
+    const s = this.state.stage + 1;
+    if (s >= EV.length) { this.end(true); return; }
+    setTimeout(() => {
+      if (this.state.screen !== "play") return;
+      const ev = EV[s];
+      this.setState({
+        stage: s, phase: "active", toast: ev.hint, insp: false,
+        sel: ev.type === "email" ? ev.id : this.state.sel,
+      }, () => {
+        setTimeout(() => this.setState({ toast: null }), 5000);
+        if (ev.type === "scene") this.scene();
+      });
+    }, 1600);
+  },
+
+  end(win) {
+    clearInterval(this.ti);
+    this.setState({ screen: "end", app: null, dlg: null, toast: null });
+  },
+
+  // Aplica pontos/escudos e mostra o feedback da Marta antes do próximo evento
+  resolve(ok, hurt, fb, id, label) {
+    const lives = this.state.lives - (!ok && hurt ? 1 : 0);
+    const score = Math.max(0, this.state.score + (ok ? 100 : -50));
+    this.setState(s => ({ lives, score, phase: "between", res: { ...s.res, [id]: { ok, label } } }));
+    this.say(fb.map(t => ({ sp: "marta", t })), () => lives <= 0 ? this.end(false) : this.next());
+  },
+
+  // Evento de cena (Bia chega à mesa) — diálogo com escolhas
+  scene() {
+    const ev = EV[this.state.stage];
+    this.say(
+      ev.lines.map(t => ({ sp: "bia", t })),
+      null,
+      ev.ch.map(c => ({ t: c.t, go: () => this.resolve(c.ok, !c.ok, c.fb, ev.id, "") }))
+    );
+  },
+
+  // Atender o telefone fixo
+  answer() {
+    const ev = EV[this.state.stage];
+    if (!ev || ev.type !== "phone" || this.state.phase !== "active") return;
+    this.setState({ phase: "call", toast: null });
+    this.say(
+      ev.lines.map(t => ({ sp: "ti", t })),
+      null,
+      ev.ch.map(c => ({ t: c.t, go: () => this.resolve(c.ok, !c.ok, c.fb, ev.id, "") }))
+    );
+  },
+
+  openApp(a) { this.setState({ app: a, toast: null }); },
+
+  chatPick(i) {
+    const ev = EV[this.state.stage], c = ev.ch[i];
+    this.setState(s => ({ reply: { ...s.reply, [ev.id]: c.reply } }));
+    this.resolve(c.ok, c.hurt, c.fb, ev.id, "");
+  },
+
+  toMenu() { clearInterval(this.ti); this.setState({ screen: "title", dlg: null }); },
+};
+
+// App de Arquivos: o jogador move arquivos seguros para Documentos e põe os maliciosos em quarentena.
+const FilesLogic = {
+  fileAct(kind) {
+    const s = this.state, f = FILES.find(x => x.n === s.selFile);
+    if (!f || s.files[f.n]) return;
+    const T = TEXT.files;
+    const ok = (f.bad && kind === "quar") || (!f.bad && kind === "move");
+    let lives = s.lives, score = s.score, msg;
+    if (ok) { score += 40; msg = T.correct + f.fb; }
+    else if (f.bad) { lives -= 1; msg = T.malwareKept + f.fb; }
+    else { score = Math.max(0, score - 20); msg = T.safeFlagged + f.fb; }
+
+    const files = { ...s.files, [f.n]: kind };
+    const all = Object.keys(files).length === FILES.length;
+    this.setState({ files, lives, score, fmsg: { ok, t: msg } }, () => {
+      if (!all) return;
+      this.setState(x => ({ phase: "between", res: { ...x.res, e4: { ok: true, label: "" } } }));
+      this.say(
+        [{ sp: "marta", t: lives <= 0 ? T.finishDead : T.finishOk }],
+        () => lives <= 0 ? this.end(false) : this.next()
+      );
+    });
+  },
+};
+
+// Modo Quiz: perguntas vêm de src/data/quiz/questions.json (injetadas como QUIZ).
+const QuizLogic = {
+  startQuiz() {
+    clearInterval(this.ti);
+    this.setState({ screen: "quiz", qi: 0, qpick: null, qscore: 0, qres: [], dlg: null });
+  },
+
+  qPick(i) {
+    const s = this.state;
+    if (s.qpick !== null) return;
+    const q = this.Q[s.qi], ok = i === q.answer;
+    this.setState({ qpick: i, qscore: s.qscore + (ok ? 100 : 0), qres: [...s.qres, { cat: q.cat, ok }] });
+  },
+
+  qNext() {
+    const s = this.state;
+    if (s.qi + 1 >= this.Q.length) this.setState({ screen: "qend" });
+    else this.setState({ qi: s.qi + 1, qpick: null });
+  },
+
+  // Valores do template para as telas "quiz" e "qend"
+  quizVals() {
+    const s = this.state;
+    if (s.screen !== "quiz" && s.screen !== "qend") {
+      return { screenQuiz: false, screenQEnd: false, startQuiz: this.startQuiz, toMenu: this.toMenu };
+    }
+    const T = TEXT.quiz;
+    const Q = this.Q = this.Q && this.Q.length ? this.Q : QUIZ.questions;
+    const q = Q[s.qi] || Q[0] || { options: [], cat: "" };
+    const picked = s.qpick !== null, ok = picked && s.qpick === q.answer, L = T.letters;
+
+    // acertos por tema
+    const cats = {};
+    Q.forEach(x => { cats[x.cat] = cats[x.cat] || { n: x.cat, ok: 0, t: 0 }; });
+    s.qres.forEach(r => { cats[r.cat].t++; if (r.ok) cats[r.cat].ok++; });
+
+    const nOk = s.qres.filter(r => r.ok).length, pct = Q.length ? nOk / Q.length : 0;
+    const rk = T.ranks.find(r => pct >= r.min);
+    const scn = q.scenario;
+
+    return {
+      screenQuiz: s.screen === "quiz", screenQEnd: s.screen === "qend", startQuiz: this.startQuiz, toMenu: this.toMenu,
+      qNum: s.qi + 1, qTotal: Q.length, qCat: q.cat,
+      qPct: ((s.qi + (picked ? 1 : 0)) / Math.max(1, Q.length) * 100) + "%", qScore: s.qscore,
+      hasScn: !!scn,
+      scn: scn ? { kind: scn.kind, from: scn.from, subject: scn.subject, hasSubj: !!scn.subject, lines: scn.lines.map(t => ({ t })) } : { lines: [] },
+      qPrompt: q.prompt,
+      qOpts: q.options.map((t, i) => ({
+        t, l: L[i],
+        bg: !picked ? "#f4efdc" : i === q.answer ? "#bfe3c4" : i === s.qpick ? "#f2a9a2" : "#f4efdc",
+        op: picked && i !== q.answer && i !== s.qpick ? 0.5 : 1,
+        go: () => this.qPick(i),
+      })),
+      qAnswered: picked,
+      qFbTitle: ok ? T.correctTitle : T.wrongTitle.replace("{letter}", L[q.answer]),
+      qFbColor: ok ? "#7fe3a0" : "#f2a9a2",
+      qExplain: q.explain,
+      qNextLabel: s.qi + 1 >= Q.length ? T.resultLabel : T.nextLabel, qNext: this.qNext,
+      qEndTitle: rk.title, qEndColor: rk.color, qCorrect: nOk,
+      qCats: Object.values(cats).map(c => ({ n: c.n, r: c.ok + "/" + c.t, col: c.ok === c.t ? "#7fe3a0" : c.ok === 0 ? "#ff8a7a" : "#ffb000" })),
+    };
+  },
+};
+
+// Valores usados pelo template (os {{ ... }} do HTML), divididos por área da tela.
+const RenderLogic = {
+  // Valores derivados compartilhados entre as áreas
+  derive() {
+    const s = this.state, P = this.props;
+    const ev = EV[s.stage], act = !!ev && s.phase === "active";
+    const chatEv = EV.slice(0, Math.max(0, s.stage + 1)).reverse().find(e => e.type === "chat");
+    const chatCan = !!chatEv && act && ev.id === chatEv.id;
+    const ringing = !!ev && ev.type === "phone" && s.phase === "active";
+    return { s, P, ev, act, chatEv, chatCan, ringing };
+  },
+
+  renderVals() {
+    const c = this.derive();
+    return {
+      ...this.quizVals(),
+      ...this.screenVals(c),
+      ...this.desktopVals(c),
+      ...this.emailVals(c),
+      ...this.filesVals(c),
+      ...this.chatVals(c),
+      ...this.hudVals(c),
+      ...this.dialogVals(c),
+      ...this.phoneVals(c),
+    };
+  },
+
+  // Qual tela está ativa + tela final do modo interativo
+  screenVals({ s }) {
+    const M = this.maxL(), R = TEXT.ranks;
+    const rank = s.lives <= 0 ? R.dead : s.lives >= M ? R.perfect : s.lives > 1 ? R.good : R.close;
+    return {
+      screenTitle: s.screen === "title", screenPlay: s.screen === "play", screenEnd: s.screen === "end",
+      start: this.start,
+      endKicker: R.kicker, endTitle: rank.title, endColor: rank.color,
+      lessons: TEXT.lessons.map(t => ({ t })),
+    };
+  },
+
+  // Ícones da área de trabalho e abertura/fechamento de apps
+  desktopVals({ s, ev, act, chatEv, chatCan }) {
+    const mkIc = (k, label, glyph, bg, badge) => ({ label, glyph, bg, badge, go: () => this.openApp(k) });
+    return {
+      icons: [
+        mkIc("email", "Email", "@", "#9fc4f5", !!ev && ev.type === "email" && act),
+        mkIc("files", "Arquivos", "[]", "#f5d98a", !!ev && ev.type === "files" && act),
+        mkIc("chat", "Chat", "...", "#b9e6b0", !!chatEv && chatCan),
+      ],
+      showEmail: s.app === "email", showFiles: s.app === "files", showChat: s.app === "chat",
+      closeApp: () => this.setState({ app: null }),
+    };
+  },
+
+  emailVals({ s, ev, act }) {
+    const T = TEXT.email;
+    const emails = EV.filter((e, i) => e.type === "email" && i <= s.stage).map(e => {
+      const r = s.res[e.id];
+      return {
+        from: e.from, subject: e.subject, time: e.time,
+        tag: r ? r.label.toUpperCase() : "NOVO",
+        tagBg: r ? (r.ok ? "#bfe3c4" : "#f2a9a2") : "#ffd34d",
+        bg: s.sel === e.id ? "#cfe0f5" : "transparent",
+        pick: () => this.setState({ sel: e.id, insp: false }),
+      };
+    }).reverse();
+    const se0 = EV.find(e => e.id === s.sel && e.type === "email");
+    const se = se0 ? { ...se0, body: se0.body.map(t => ({ t })), hasLink: !!se0.url, hasAttach: !!se0.attach, linkLabel: se0.linkLabel } : {};
+    const canAct = !!se0 && act && ev.id === se0.id, rs = se0 && s.res[se0.id];
+    return {
+      emails, noEmails: emails.length === 0, se, hasSel: !!se0, noSel: !se0, canAct,
+      resolvedSel: !!se0 && !canAct,
+      selResult: rs ? (rs.ok ? T.resultOk : T.resultBad) + " (" + rs.label + ")" : T.resultPending,
+      insp: s.insp, toggleInsp: () => this.setState({ insp: !s.insp }),
+      doAct: () => this.resolve(se0.legit, !se0.legit, se0.legit ? se0.good : se0.bad, se0.id, T.labelActed),
+      doReport: () => this.resolve(!se0.legit, false, se0.legit ? se0.bad : se0.good, se0.id, T.labelReported),
+    };
+  },
+
+  filesVals({ s, ev }) {
+    const T = TEXT.files;
+    const sf0 = FILES.find(f => f.n === s.selFile);
+    const filesActive = !!ev && ev.type === "files" && (s.phase === "active" || Object.keys(s.files).length > 0);
+    const fileOpen = !!sf0 && !s.files[sf0.n];
+    return {
+      filesActive, filesIdle: !filesActive, filesIdleMsg: s.res.e4 ? T.idleDone : T.idleNone,
+      files: FILES.map(f => {
+        const st = s.files[f.n];
+        return {
+          n: f.n, ext: f.ext, kb: f.kb,
+          status: st ? (st === "move" ? T.statusMoved : T.statusQuarantine) : "",
+          op: st ? 0.55 : 1,
+          bd: s.selFile === f.n ? "#1d4fb8" : "#cfc7ae",
+          bg: s.selFile === f.n ? "#dbe8fa" : "#fffdf5",
+          pick: () => this.setState({ selFile: f.n }),
+        };
+      }),
+      hasFile: !!sf0, noFile: !sf0, sf: sf0 || {}, fileOpen,
+      fMove: () => this.fileAct("move"), fQuar: () => this.fileAct("quar"),
+      hasFmsg: !!s.fmsg, fmsg: s.fmsg ? s.fmsg.t : "", fmsgBg: s.fmsg && s.fmsg.ok ? "#bfe3c4" : "#f2a9a2",
+    };
+  },
+
+  chatVals({ s, chatEv, chatCan }) {
+    let chatMsgs = [];
+    if (chatEv) {
+      chatMsgs = chatEv.msgs.map(t => ({ t, side: "flex-start", bg: "#e8e2cf" }));
+      if (s.reply[chatEv.id]) chatMsgs.push({ t: s.reply[chatEv.id], side: "flex-end", bg: "#bfe3c4" });
+    }
+    return {
+      hasChat: !!chatEv, noChat: !chatEv, chat: chatEv || {}, chatMsgs, chatCan,
+      chatChoices: chatEv ? chatEv.ch.map((c, i) => ({ t: c.t, go: () => this.chatPick(i) })) : [],
+    };
+  },
+
+  // Barra de tarefas (dica, escudos, pontos, relógio), toast e efeito CRT
+  hudVals({ s, P, ev, act }) {
+    const M = this.maxL();
+    return {
+      crtOpacity: P.crt === false ? 0 : 1,
+      hasToast: !!s.toast, toast: s.toast,
+      hint: ev && act ? ev.hint : (s.stage < 0 ? TEXT.hints.preparing : TEXT.hints.waiting),
+      shields: Array.from({ length: M }, (_, i) => ({ c: i < s.lives ? "#3fae5a" : "#8a8168" })),
+      score: s.score, lives: s.lives, clock: ev ? ev.time : TEXT.clockStart,
+    };
+  },
+
+  // Caixa de diálogo (personagem, texto digitado, setinha, escolhas)
+  dialogVals({ s }) {
+    const d = s.dlg, dl = d && d.lines[d.i], dd = d && s.typed >= dl.t.length;
+    const showCh = !!d && !!d.choices && d.i === d.lines.length - 1 && dd;
+    return {
+      hasDlg: !!d, dlgClick: this.dlgClick,
+      dsp: dl ? SP[dl.sp] : { n: "", c: "#fff", i: "" },
+      dtext: dl ? dl.t.slice(0, s.typed) : "",
+      dArrow: !!d && dd && !showCh, dChoices: showCh,
+      choices: showCh ? d.choices.map(c => ({ t: c.t, go: () => { this.setState({ dlg: null }); c.go(); } })) : [],
+    };
+  },
+
+  // Telefone fixo ao lado do monitor
+  phoneVals({ ringing }) {
+    const handset = React.createElement("div",
+      {
+        onClick: this.answer,
+        style: {
+          width: 150, height: 46, borderRadius: 23, background: "#2b2722",
+          boxShadow: "inset 0 4px 0 #4a443b, 0 4px 0 #0006",
+          cursor: ringing ? "pointer" : "default", animation: ringing ? "ring .5s infinite" : "none",
+          display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 10px", boxSizing: "border-box",
+        },
+      },
+      React.createElement("div", { style: { width: 34, height: 30, borderRadius: 15, background: "#3d372f" } }),
+      React.createElement("div", { style: { width: 34, height: 30, borderRadius: 15, background: "#3d372f" } })
+    );
+    return {
+      phoneHandset: handset,
+      ledColor: ringing ? "#e04a3f" : "#6b6552",
+      phoneLabel: ringing ? TEXT.phone.ringing : TEXT.phone.idle,
+      keys: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map(k => ({ k })),
+    };
+  },
+};
+
+// Componente principal: junta o estado inicial e os módulos de lógica.
+// (SP, EV, FILES, INTRO, QUIZ e TEXT são gerados a partir de src/data/*.json pelo build.mjs)
+const LOGIC_MODULES = [DialogueLogic, FlowLogic, FilesLogic, QuizLogic, RenderLogic];
+
+// Métodos usados diretamente como handlers no template precisam de `this` fixo
+const BOUND_HANDLERS = ["dlgClick", "start", "answer", "startQuiz", "toMenu", "qNext"];
+
+class Component extends DCLogic {
+  state = {
+    screen: "title", stage: -1, phase: "between", lives: 3, score: 0, app: null, sel: null,
+    res: {}, reply: {}, insp: false, dlg: null, typed: 0, toast: null, files: {}, selFile: null, fmsg: null,
+    qi: 0, qpick: null, qscore: 0, qres: [],
+  };
+
+  constructor(...args) {
+    super(...args);
+    BOUND_HANDLERS.forEach(n => { this[n] = this[n].bind(this); });
+  }
+
+  componentWillUnmount() { clearInterval(this.ti); }
+}
+
+LOGIC_MODULES.forEach(m => Object.assign(Component.prototype, m));
 </script>
 </body>
 </html>

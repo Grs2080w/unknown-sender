@@ -1,0 +1,26 @@
+{
+  "id": "e8",
+  "type": "email",
+  "time": "14:00",
+  "hint": "Novo email na caixa de entrada",
+  "from": "Microsoft 365",
+  "addr": "seguranca@m1crosoft-login.net",
+  "subject": "Sua senha expira HOJE",
+  "body": [
+    "Ola,",
+    "Sua senha de acesso expira em 2 horas. Para manter sua conta ativa, confirme seus dados no link abaixo.",
+    "Se nao confirmar, sua conta sera excluida."
+  ],
+  "linkLabel": "Manter minha senha",
+  "url": "http://m1crosoft-login.net/verificar",
+  "legit": false,
+  "act": "Clicar em \"Manter minha senha\"",
+  "good": [
+    "Boa! O dominio e falso (\"m1crosoft-login.net\") e a mensagem usa pressa e ameaca para roubar sua senha.",
+    "Pagina falsa de login e o tipo mais comum de phishing."
+  ],
+  "bad": [
+    "A pagina era falsa e guardou sua senha. O golpista entrou na sua conta.",
+    "Antes de digitar senha, confira o endereco do site. Em caso de duvida, va direto ao site oficial."
+  ]
+}

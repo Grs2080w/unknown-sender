@@ -1,0 +1,28 @@
+{
+  "id": "e2",
+  "type": "email",
+  "time": "08:40",
+  "hint": "Novo email na caixa de entrada",
+  "from": "Papelaria Central",
+  "addr": "financeiro@papelaria-centra1.com",
+  "subject": "URGENTE: boleto vencido, evite multa hoje!",
+  "body": [
+    "Prezado cliente,",
+    "Identificamos um boleto em atraso. Pague HOJE para evitar multa de 30% e bloqueio do seu CNPJ.",
+    "Baixe o boleto no anexo ou clique no botao abaixo."
+  ],
+  "linkLabel": "Baixar boleto agora",
+  "url": "http://papelaria-centra1.com/boleto.php?id=88",
+  "attach": "boleto_2026.pdf",
+  "attachType": "Programa (.exe) - o nome real e boleto_2026.pdf.exe",
+  "legit": false,
+  "act": "Baixar o boleto",
+  "good": [
+    "Boa! Sinais de alerta: urgencia, ameaca de multa, endereco com \"centra1\" (numero 1 no lugar de L) e anexo que na verdade e um programa .exe.",
+    "Denuncie para a TI e nao clique em nada."
+  ],
+  "bad": [
+    "Ops! O anexo era um programa malicioso (.pdf.exe). Seu computador foi infectado e a TI precisou isola-lo.",
+    "Urgencia, ameaca e extensao dupla sao sinais classicos de phishing."
+  ]
+}

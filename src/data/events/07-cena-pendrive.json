@@ -1,0 +1,36 @@
+{
+  "id": "e7",
+  "type": "scene",
+  "time": "12:30",
+  "hint": "A Bia esta chegando a sua mesa...",
+  "lines": [
+    "Olha o que eu achei no estacionamento! Um pen drive escrito \"SALARIOS 2026\".",
+    "Que curiosidade... bora ver de quem e? O que a gente faz?"
+  ],
+  "ch": [
+    {
+      "t": "Espetar no meu computador para ver de quem e",
+      "ok": false,
+      "fb": [
+        "O pen drive instalou um malware assim que foi conectado. Isso se chama isca (baiting).",
+        "Nunca conecte dispositivos desconhecidos."
+      ]
+    },
+    {
+      "t": "Entregar para a TI sem conectar em nenhum computador",
+      "ok": true,
+      "fb": [
+        "Exato! A TI analisa em um ambiente isolado e seguro.",
+        "Curiosidade e a isca preferida de quem espalha malware."
+      ]
+    },
+    {
+      "t": "Deixar a Bia espetar no computador dela",
+      "ok": false,
+      "fb": [
+        "O computador da Bia foi infectado e o virus se espalhou pela rede.",
+        "O risco nao some so porque o computador e de outra pessoa."
+      ]
+    }
+  ]
+}
